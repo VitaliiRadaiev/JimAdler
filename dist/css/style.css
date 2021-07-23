@@ -4008,6 +4008,7 @@ textarea {
   text-transform: uppercase;
   color: #B91216;
   margin-bottom: 17px;
+  text-align: left;
 }
 
 .about-us-block__text {
@@ -4233,7 +4234,7 @@ textarea {
   }
 
   .about-us-block__mobile-btn {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -4454,6 +4455,7 @@ textarea {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+    text-align: left;
   }
 
   .result__btn-group {
