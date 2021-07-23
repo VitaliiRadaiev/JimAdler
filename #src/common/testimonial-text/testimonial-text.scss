@@ -1,0 +1,108 @@
+.testimonial-text {
+    &__img {
+        & img {
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            max-height: 784px;
+            min-height: 426px;
+        }
+    }
+
+    &__slider {
+        background-color: $mainColor;
+        padding-top: 97px;
+        padding-bottom: 39px;
+
+        @media (max-width: $md2+px) {
+            padding-top: 85px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-top: 77px;
+        }
+
+        & .swiper-container {
+            padding-bottom: 30px;
+        }
+
+        & .swiper-slide {
+            text-align: center;
+            color: $textLightColor;
+        }
+
+        & .swiper-pagination {
+            & .swiper-pagination-bullet  {
+                background-color: rgba(#fff, 0.7);
+                margin: 0 8px;
+
+                &.swiper-pagination-bullet-active {
+                    background: #181818;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        height: 52px;
+        margin-bottom: 45px;
+        & img {
+            height: 100%;
+        }
+    }
+
+    &__rating {
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0 auto 26px;
+        max-width: 994px;
+        font-family: $titleFontFamily;
+        font-size: 51px;
+        line-height: 1.156em;
+
+        @media (max-width: $md2+px) {
+            font-size: 42px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__author {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.28em;
+        text-transform: uppercase;
+        margin-bottom: 42px;
+
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+            margin-bottom: 27px;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 35px;
+        & img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+    }
+}
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}

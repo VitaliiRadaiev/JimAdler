@@ -203,7 +203,6 @@ textarea {
 
 ._page {
 	flex: 1 1 auto;
-	padding: 1px 0;
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
@@ -215,7 +214,7 @@ textarea {
 	padding: 0 20px;
 }
 .container-lg {
-	max-width: 1425px;
+	max-width: 1430px;
 	margin: 0 auto;
 	padding: 0 50px;
 
@@ -264,7 +263,20 @@ textarea {
 	font-family: $titleFontFamily;
 	font-weight: 400;
 	font-size: 72px;
-	line-height: 1.152em;
+	line-height: 1.19em;
+	display: flex;
+	flex-direction: column;
+
+	& > strong {
+		font-weight: 400;
+	}
+
+	@media (max-width: $md2+px) {
+		font-size: 51px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 42px;
+	}
 }
 
 .title-3 {
@@ -314,6 +326,12 @@ textarea {
 	line-height: 28px;
 	text-transform: uppercase;
 
+	@media (max-width: $md3+px) {
+		font-size: 18px;
+		line-height: 23px;
+		min-height: 54px;
+	}
+
 	@media (min-width: 992px) {
 		&:hover {
 			background-color: $mainColor2;
@@ -353,7 +371,7 @@ button.btn-default {
 	@media (min-width: 992px) {
 		height: 60px;
 		flex: 0 0 60px;
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 		cursor: pointer;
 
 		@media (min-width: 992px) {
@@ -363,7 +381,7 @@ button.btn-default {
 		}
 
 		& img {
-			width: 17px
+			width: 17px;
 		}
 	}
 }
@@ -376,7 +394,7 @@ button.btn-default {
 	width: 88px;
 	border-radius: 50%;
 	background-color: $mainColor;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 	padding: 15px 15px 15px 9px;
 
 	@media (max-width: $md2+px) {
@@ -406,12 +424,79 @@ button.btn-default {
 // === and btn ========================================================================
 
 .input {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	min-height: 65px;
+	background-color: #fff;
+	padding: 10px 27px;
+	font-size: 18px;
+	line-height: 23px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	@media (max-width: $md2+px) {
+		background: #F5F0E9;
+	}
+
+	@media (max-width: $md3+px) {
+		min-height: 58px;
+	}
 }
 
 .textarea {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	height: 203px;
+	background-color: #fff;
+	padding: 22px 27px;
+	font-size: 18px;
+	line-height: 23px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	font-weight: 500;
+	resize: none;
+
+	@media (max-width: $md2+px) {
+		background: #F5F0E9;
+	}
+
+	@media (max-width: $md3+px) {
+		height: 168px;
+	}
 }
 
 .link {
+}
+
+.social {
+	display: flex;
+	flex-wrap: wrap;
+
+	& > li {
+		flex: 0 0 auto;
+		margin-right: 10px;
+		margin-bottom: 10px;
+
+		& > a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 28px;
+			width: 28px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: all .3s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					background-color: $mainColor2;
+				}
+			}
+		}
+	}
 }
 
 // === TEXT CONTETN BLOCK ========================================================================
@@ -419,6 +504,11 @@ button.btn-default {
 	font-size: 22px;
 	line-height: 150%;
 	font-family: $mainFontFamily;
+
+	@media (max-width: $md3+px) {
+		font-size: 18px;
+	}
+
 	& h1 {
 	}
 	& h2 {
@@ -434,6 +524,7 @@ button.btn-default {
 	}
 
 	& p {
+		margin-bottom: 1em;
 	}
 
 	& ul {
@@ -453,6 +544,10 @@ button.btn-default {
 @import "../common/checkbox/checkbox";
 @import "../common/result/result";
 @import "../common/testimonial/testimonial";
+@import "../common/text-block/text-block";
+@import "../common/main-form/main-form";
+@import "../common/testimonial-text/testimonial-text";
+@import "../common/rating/rating";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

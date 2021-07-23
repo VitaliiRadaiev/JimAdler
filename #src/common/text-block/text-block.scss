@@ -1,0 +1,58 @@
+.text-block {
+    padding: 72px 0 80px;
+    text-align: center;
+
+    @media (max-width: $md2+px) {
+        padding: 60px 0;
+    }
+    @media (max-width: $md3+px) {
+        padding: 50px 0 60px;
+    }
+
+    &__title {
+        color: $mainColor2;
+        margin-bottom: 40px;
+    }
+
+    & .line-decor {
+        margin-bottom: 40px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        color: $textColor;
+        margin: 0 auto 40px;
+        max-width: 995px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    & .btn-default {
+        min-width: 302px;
+
+        @media (max-width: $md3+px) {
+            min-width: 280px;
+        }
+    }
+}
+
+
+.line-decor {
+}
+
+
+.line-decor {
+    height: 12px;
+    width: 294px;
+    display: inline-block;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}

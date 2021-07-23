@@ -14,7 +14,10 @@ window.addEventListener('load', function () {
 			let header = document.querySelector('.header');
 			if(header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
-				setPedding();
+				setTimeout(() => {
+					setPedding();
+				},100)
+				
 				window.addEventListener('resize', setPedding);
 			}
 			
@@ -1190,7 +1193,155 @@ document.addEventListener('keydown', function(e) {
         })
     }
 };
+	{
+    let testimonialSlider = document.querySelector('.testimonial-text__slider');
+    if(testimonialSlider) {
+        let slider = new Swiper(testimonialSlider.querySelector('.swiper-container'), {
+
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+            speed: 800,
+            // Dotts
+            pagination: {
+            	el: testimonialSlider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+        });
+    }
+};
+	//RATING
+$('.rating.edit .star').hover(function () {
+    var block = $(this).parents('.rating');
+    block.find('.rating__activeline').css({ width: '0%' });
+    var ind = $(this).index() + 1;
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+}, function () {
+    var block = $(this).parents('.rating');
+    block.find('.star').removeClass('active');
+    var ind = block.find('input').val();
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$('.rating.edit .star').click(function (event) {
+    var block = $(this).parents('.rating');
+    var re = $(this).index() + 1;
+    block.find('input').val(re);
+    var linew = re / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$.each($('.rating'), function (index, val) {
+    var ind = $(this).find('input').val();
+    var linew = ind / $(this).parent().find('.star').length * 100;
+    setrating($(this), linew);
+});
+function setrating(th, val) {
+    th.find('.rating__activeline').css({ width: val + '%' });
+};
+	{
+	const slider = document.querySelector('.partners__list');
+	if(slider) {
+		let mySwiper;
+
+		function mobileSlider() {
+			if(document.documentElement.clientWidth <= 768 && slider.dataset.mobile == 'false') {
+				mySwiper = new Swiper(slider, {
+					slidesPerView: 'auto',
+					freeMode: true,
+					speed: 600,
+				});
+
+				slider.dataset.mobile = 'true';
+
+				//mySwiper.slideNext(0);
+			}
+
+			if(document.documentElement.clientWidth > 767.98) {
+				slider.dataset.mobile = 'false';
+
+				if(slider.classList.contains('swiper-container-initialized')) {
+					mySwiper.destroy();
+				}
+			}
+		}
+
+		mobileSlider();
+
+		window.addEventListener('resize', () => {
+			mobileSlider();
+		})
+	}
+
+};
 	
+	{
+	const slider = document.querySelector('.about-us-block__slider');
+	if(slider) {
+		let mySwiper;
+
+		function mobileSlider() {
+			if(document.documentElement.clientWidth > 767.98 && slider.dataset.mobile == 'false') {
+				mySwiper = new Swiper(slider, {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    speed: 800,
+                    watchSlidesVisibility: true,
+                    // Arrows
+                    navigation: {
+                        nextEl: slider.querySelector('.about-us-block__slide-btn-next'),
+                        prevEl: slider.querySelector('.about-us-block__slide-btn-prev'),
+                    },
+				});
+
+				slider.dataset.mobile = 'true';
+
+				//mySwiper.slideNext(0);
+			}
+
+			if(document.documentElement.clientWidth < 768) {
+				slider.dataset.mobile = 'false';
+
+				if(slider.classList.contains('swiper-container-initialized')) {
+					mySwiper.destroy();
+				}
+			}
+		}
+
+		mobileSlider();
+
+		window.addEventListener('resize', () => {
+			mobileSlider();
+		})
+
+        let wrapper = slider.querySelector('.swiper-wrapper');
+
+        if(document.documentElement.clientWidth < 768) {
+            let arr = Array.from(wrapper.children);
+            if(arr.length > 3) {
+                arr = arr.slice(3, arr.length);
+                let div = document.createElement('div');
+                div.className = '_toggleWrap';
+                div.append(...arr);
+    
+                wrapper.append(div);
+    
+                let btn = document.querySelector('.about-us-block__mobile-btn');
+
+                btn.addEventListener('click', function() {
+                    _slideDown(div);
+                    this.style.display = 'none';
+
+                })
+            }
+            
+        }
+	}
+};
 });
 
 window.addEventListener('DOMContentLoaded', function() {

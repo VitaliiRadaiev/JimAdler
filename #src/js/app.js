@@ -14,7 +14,10 @@ window.addEventListener('load', function () {
 			let header = document.querySelector('.header');
 			if(header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
-				setPedding();
+				setTimeout(() => {
+					setPedding();
+				},100)
+				
 				window.addEventListener('resize', setPedding);
 			}
 			
@@ -31,7 +34,11 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/result/result.js');
 	@@include('../common/testimonial/testimonial.js');
+	@@include('../common/testimonial-text/testimonial-text.js');
+	@@include('../common/rating/rating.js');
+	@@include('../common/footer/footer.js');
 	
+	@@include('pages/home.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {
