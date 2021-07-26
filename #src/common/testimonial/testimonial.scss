@@ -1,11 +1,15 @@
 .testimonial {
     position: relative;
-    padding: 132px 0 149px;
+    padding: 132px 0 100px;
+
+    @media (max-width: $md2+px) {
+        padding: 139px 0 95px;
+    }
 
     @media (max-width: $md3+px) {
         padding-top: 0;
-        padding-bottom: 300px;
-        background-color: #29322F;
+        padding-bottom: 297px;
+        background-color: #29322f;
     }
 
     &__images {
@@ -25,7 +29,7 @@
 
         &:before {
             position: absolute;
-            content: '';
+            content: "";
             left: 0;
             bottom: 0;
             height: 311px;
@@ -45,12 +49,12 @@
 
     &__body {
         color: $textLightColor;
-        min-height: 843px;
+        min-height: 610px;
 
         @media (max-width: $md3+px) {
             min-height: 456px;
-            background: linear-gradient(180deg, #29322F 63.15%, rgba(38, 48, 43, 0) 100%);
-            padding-top: 40px;
+            background: linear-gradient(180deg, #29322f 63.15%, rgba(38, 48, 43, 0) 100%);
+            padding-top: 37px;
             padding-bottom: 0;
             overflow: visible;
         }
@@ -71,14 +75,35 @@
 
     &__text {
         max-width: 617px;
-        margin-bottom: 25px;
+        margin-bottom: 27px;
+
+        @media (max-width: $md2+px) {
+            max-width: 430px;
+            line-height: 120%;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 13px;
+        }
     }
 
     &__name {
         font-weight: 600;
         font-size: 23px;
         line-height: 1.26em;
-        margin-bottom: 24px;
+        margin-bottom: 28px;
+
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+            line-height: 33px;
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+            margin-bottom: 33px;
+        }
     }
 
     &__play {
@@ -89,8 +114,8 @@
         line-height: 1.28em;
         text-transform: uppercase;
         color: $textLightColor;
-        transition: all .3s ease;
-        margin-bottom: 45px;
+        transition: all 0.3s ease;
+        margin-bottom: 37px;
 
         @media (min-width: 992px) {
             &:hover {
@@ -109,9 +134,17 @@
             flex: 0 0 auto;
             margin-right: 22px;
 
+            @media (max-width: $md2+px) {
+                margin-right: 31px;
+            }
+
             @media (max-width: $md3+px) {
                 margin-right: 13px;
             }
+        }
+
+        & > span {
+            margin-top: -4px;
         }
     }
 
@@ -122,7 +155,7 @@
             @media (max-width: $md2+px) {
                 position: absolute;
                 z-index: 3;
-                top: 50%;
+                top: 47%;
                 transform: translateY(-50%);
 
                 & img {
@@ -130,7 +163,7 @@
                 }
 
                 &:before {
-                    content: '';
+                    content: "";
                     width: 17px;
                     height: 43px;
                 }
@@ -165,8 +198,12 @@
             position: absolute;
             left: 0;
             width: 100%;
-            bottom: -200px;
+            bottom: -163px;
             margin-left: 0;
+
+            & > span {
+                margin: 0 19px;
+            }
         }
     }
 
@@ -174,14 +211,14 @@
         left: 13px;
 
         &:before {
-            background: url('../img/icons/arrow-left.svg') center no-repeat;
+            background: url("../img/icons/arrow-left.svg") center no-repeat;
         }
     }
 
     &__btn-next {
         right: 13px;
         &:before {
-            background: url('../img/icons/arrow-right.svg') center no-repeat;
+            background: url("../img/icons/arrow-right.svg") center no-repeat;
         }
     }
 }

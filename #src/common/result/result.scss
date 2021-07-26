@@ -6,6 +6,10 @@
         padding: 58px 0 74px;
     }
 
+    @media (max-width: $md3+px) {
+        padding: 69px 0 74px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -25,8 +29,18 @@
     &__body {
         color: $textLightColor;
 
+        @media (max-width: $md3+px) {
+            min-height: 485px;
+        }
+
         & .btn-default {
             min-width: 261px;
+
+            @media (max-width: $md2+px) {
+                min-width: 280px;
+                min-height: 54px;
+                font-size: 18px;
+            }
         }
     }
 
@@ -44,6 +58,11 @@
             margin-bottom: 123px;
         }
 
+        @media (max-width: $md3+px) {
+            font-size: 26px;
+            margin-bottom: 119px;
+        }
+
         @media (min-width: 992px) {
             &:before {
                 position: absolute;
@@ -59,15 +78,15 @@
     }
 
     &__flex-wrap {
-       display: flex;
+        display: flex;
 
-       @media (max-width: $md2+px) {
-           flex-direction: column-reverse;
-       }
+        @media (max-width: $md2+px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__col-1 {
-        flex: 0 0 45%;
+        flex: 0 0 44.5%;
         padding-right: 30px;
 
         @media (max-width: $md1+px) {
@@ -88,6 +107,10 @@
         @media (min-width: 992px) {
             margin-top: -18px;
         }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 18px;
+        }
     }
 
     &__text {
@@ -100,7 +123,7 @@
     }
 
     &__slider {
-        margin-bottom: 38px;
+        margin-bottom: 33px;
         @media (min-width: 992px) {
             margin-bottom: 0;
             & .swiper-wrapper {
@@ -109,12 +132,26 @@
                 column-gap: 5%;
                 row-gap: 110px;
                 margin-bottom: 67px;
+
+                @media (max-width: $md3+px) {
+                    margin-bottom: 16px;
+                }
             }
 
             & .swiper-slide {
                 height: auto;
                 flex: 0 1 50%;
                 text-align: left;
+
+                &:nth-child(even) {
+                    transform: translateX(-12px);
+                }
+            }
+        }
+
+        & .swiper-wrapper {
+            @media (max-width: $md3+px) {
+                margin-bottom: 16px;
             }
         }
 
@@ -132,6 +169,16 @@
         font-size: 65px;
         line-height: 1.153em;
         margin-bottom: 2px;
+
+        @media (max-width: $md2+px) {
+            font-size: 76px;
+            margin-bottom: 13px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
     }
 
     &__label {
@@ -140,6 +187,13 @@
         line-height: 1.29em;
         text-transform: uppercase;
         color: $mainColor;
+
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+        }
     }
 
     &__btn-group {
@@ -167,7 +221,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
     }
 
     &__btn-prev {

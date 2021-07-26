@@ -14,12 +14,12 @@
 	<main class="_page home-page _padding-top">
 		<section class="promo-header">
 			<div class="promo-header__bg ibg">
-				<img src="img/photo/promo-bg.jpg" alt="">
+				<!-- <img src="img/photo/promo-bg.jpg" alt=""> -->
+				<video poster="img/photo/promo-bg.jpg" data-media-mobile="img/MOBILE VIDEO.mp4" autoplay muted loop playsinline controlslist="nodownload" crossorigin="anonymous" > 
+					<source src="img/DESKTOP VIDEO.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			   </video>
 			</div>
 			<div class="promo-header__body container">
-				<div class="promo-header__title">
-					For Over 30 Years
-				</div>
 				<a href="#" class="btn-default">Free Case review</a>
 				<a href="#screen2" class="promo-header__scroll anchor">
 					scroll
@@ -30,14 +30,17 @@
 
 		<section id="screen2" class="result">
 			<div class="result__bg ibg">
-				<img src="img/photo/result-bg.png" alt="">
+				<picture>
+					<source  srcset="img/photo/result-bg-mob.png" media="(max-width: 767.98px)" >
+					<img  src="img/photo/result-bg.png" alt="img">
+				</picture>
 			</div>
 			<div class="result__body container-md">
 				<div class="result__title">Our Results</div>
 				<div class="result__flex-wrap">
 					<div class="result__col-1">
-						<div class="result__text title-3">With thousands of lawsuits filed, the numbers speak for
-							themselves.</div>
+						<div class="result__text title-3">
+							With thousands of lawsuits filed, the numbers speak for themselves.						</div>
 						<a href="#" class="btn-default">
 							call us now
 						</a>
@@ -394,7 +397,11 @@
 
 		<section class="testimonial-text">
 			<div class="testimonial-text__img">
-				<img src="img/photo/testimonial-img-5.png" alt="">
+				<picture>
+					<source  srcset="img/photo/testimonial-img-5-mob.png" media="(max-width: 767.98px)" >
+					<source  srcset="img/photo/testimonial-img-5-tablet.png" media="(max-width: 991.98px)" >
+					<img src="img/photo/testimonial-img-5.png" alt="img">
+				</picture>
 			</div>
 			<div class="testimonial-text__slider ">
 				<div class="swiper-container">

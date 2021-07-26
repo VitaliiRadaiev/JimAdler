@@ -1108,7 +1108,6 @@ document.addEventListener('keydown', function(e) {
 	{
 	const slider = document.querySelector('.result__slider');
 	if(slider) {
-        console.log(slider);
 		let mySwiper;
 
 		function mobileSlider() {
@@ -1117,10 +1116,10 @@ document.addEventListener('keydown', function(e) {
 					slidesPerView: 1,
 					speed: 600,
                     loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
                     navigation: {
                         nextEl: slider.querySelector('.result__btn-next'),
                         prevEl: slider.querySelector('.result__btn-prev'),
@@ -1341,7 +1340,8 @@ function setrating(th, val) {
             
         }
 	}
-};
+}
+;
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -1367,6 +1367,22 @@ window.addEventListener('DOMContentLoaded', function() {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	function setMobileVideoForBanner() {
+		let video = document.querySelector('.promo-header__bg video');
+		if(video) {
+			let url = video.dataset.mediaMobile;
+			Array.from(video.children).forEach(item => {
+				item.setAttribute('src', url);
+			})
+
+			video.load();
+		}
+	}
+
+	if(document.documentElement.clientWidth < 767.98) {
+		setMobileVideoForBanner()
+	}
 });
 
 //// html example --- <img class="lazy" data-src="https://images.unsplash.com/photo-1606851091851-e8c8c0fca5ba?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" src="img/photo/placeholder.jpg" alt="img">

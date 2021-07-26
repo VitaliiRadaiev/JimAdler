@@ -1,7 +1,6 @@
 {
 	const slider = document.querySelector('.result__slider');
 	if(slider) {
-        console.log(slider);
 		let mySwiper;
 
 		function mobileSlider() {
@@ -10,10 +9,10 @@
 					slidesPerView: 1,
 					speed: 600,
                     loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
                     navigation: {
                         nextEl: slider.querySelector('.result__btn-next'),
                         prevEl: slider.querySelector('.result__btn-prev'),

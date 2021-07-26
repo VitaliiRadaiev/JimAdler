@@ -263,7 +263,7 @@ textarea {
 	font-family: $titleFontFamily;
 	font-weight: 400;
 	font-size: 72px;
-	line-height: 1.19em;
+	line-height: 1.22em;
 	display: flex;
 	flex-direction: column;
 
@@ -273,6 +273,7 @@ textarea {
 
 	@media (max-width: $md2+px) {
 		font-size: 51px;
+		line-height: 1.17em;
 	}
 	@media (max-width: $md3+px) {
 		font-size: 42px;
@@ -283,13 +284,16 @@ textarea {
 	font-family: $titleFontFamily;
 	font-weight: 400;
 	font-size: 51px;
-	line-height: 1.15em;
+	line-height: 1.16em;
+	text-transform: capitalize;
 
 	@media (max-width: $md2+px) {
 		font-size: 42px;
+		line-height: 120%;
 	}
 	@media (max-width: $md3+px) {
 		font-size: 30px;
+		line-height: 118%;
 	}
 }
 
@@ -358,6 +362,10 @@ button.btn-default {
 			height: 42px;
 			margin: 0 24px;
 		}
+
+		@media (max-width: $md3+px) {
+			margin: 0 3px;
+		}
 	}
 }
 
@@ -413,7 +421,7 @@ button.btn-default {
 	}
 
 	& img {
-		margin-left: 11px;
+		margin-left: 17px;
 		max-width: 100%;
 		max-height: 100%;
 		width: auto;
@@ -438,6 +446,7 @@ button.btn-default {
 
 	@media (max-width: $md2+px) {
 		background: #F5F0E9;
+		min-height: 58px;
 	}
 
 	@media (max-width: $md3+px) {
@@ -461,6 +470,8 @@ button.btn-default {
 
 	@media (max-width: $md2+px) {
 		background: #F5F0E9;
+		height: 168px;
+		padding: 17px 27px;
 	}
 
 	@media (max-width: $md3+px) {
@@ -502,7 +513,7 @@ button.btn-default {
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 22px;
-	line-height: 150%;
+	line-height: 152%;
 	font-family: $mainFontFamily;
 
 	@media (max-width: $md3+px) {
@@ -524,7 +535,7 @@ button.btn-default {
 	}
 
 	& p {
-		margin-bottom: 1em;
+		margin-bottom: 0.7em;
 	}
 
 	& ul {

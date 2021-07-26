@@ -16,7 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; 
     z-index: 49;
 
     @media (max-width: $md2+px) {
@@ -46,11 +46,13 @@
 
         @media (max-width: $md2+px) {
             padding-top: 11px;
-            padding-bottom: 11px;
+            padding-bottom: 6px;
         }
 
         @media (max-width: $md3+px) {
             max-width: 162px;
+            padding-top: 10px;
+            padding-bottom: 13px;
         }
     }
 
@@ -86,7 +88,7 @@
 
         @media (max-width: $md3+px) {
             min-height: 50px;
-            padding-top: 5px;
+            padding-top: 11px;
             padding-bottom: 5px;
         }
     }
@@ -121,14 +123,28 @@
 
     &__search {
         display: inline-flex;
-        height: 40px;
-        width: 40px;
+        height: 42px;
+        width: 42px;
         justify-content: center;
         align-items: center;
         padding: 5px;
         transition: all 0.3s ease;
         margin-right: 24px;
         position: relative;
+
+        @media (max-width: $md2+px) {
+            margin-right: 36px;
+            transform: translateY(2px);
+
+            &:after {
+                height: 27px;
+                right: -15px;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            transform: translateY(-1px);
+        }
 
         @media (min-width: 992px) {
             height: 30px;
@@ -204,6 +220,13 @@
         @media (min-width: 992px) {
             display: none;
         }
+
+        transform: translateY(6px);
+
+        @media (max-width: $md3+px) {
+            transform: translateY(3px);
+            margin-right: 4px;
+        }
     }
 
     &__menu {
@@ -259,6 +282,7 @@
             min-width: 91px;
             padding: 5px 8px;
             background-color: $mainColor;
+            line-height: 1em;
         }
     }
 

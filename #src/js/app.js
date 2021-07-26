@@ -64,6 +64,22 @@ window.addEventListener('DOMContentLoaded', function() {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	function setMobileVideoForBanner() {
+		let video = document.querySelector('.promo-header__bg video');
+		if(video) {
+			let url = video.dataset.mediaMobile;
+			Array.from(video.children).forEach(item => {
+				item.setAttribute('src', url);
+			})
+
+			video.load();
+		}
+	}
+
+	if(document.documentElement.clientWidth < 767.98) {
+		setMobileVideoForBanner()
+	}
 });
 
 //@@include('plagins/lazy-load.js');
