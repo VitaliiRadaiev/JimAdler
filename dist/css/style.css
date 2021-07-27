@@ -3285,8 +3285,8 @@ textarea {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 285px;
+  left: -4px;
+  min-width: 284px;
   background: #ffffff;
   padding: 8px 4px 8px 10px;
   -webkit-animation: subMenuAnim 0.4s ease;
@@ -3325,7 +3325,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 44px;
+  min-height: 45px;
   color: #48494B;
   padding: 8px 12px;
   -webkit-box-align: center;

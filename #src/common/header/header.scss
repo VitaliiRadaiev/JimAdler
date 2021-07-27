@@ -393,8 +393,8 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    min-width: 285px;
+    left: -4px;
+    min-width: 284px;
     background: #ffffff;
     padding: 8px 4px 8px 10px;
     animation: subMenuAnim 0.4s ease;
@@ -420,7 +420,7 @@
 
     &__link {
         display: flex;
-        min-height: 44px;
+        min-height: 45px;
         color: $textColor;
         padding: 8px 12px;
         align-items: center;
