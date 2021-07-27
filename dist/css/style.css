@@ -4942,6 +4942,92 @@ textarea {
   min-width: 241px;
 }
 
+.practice-list-page .hero {
+  margin-bottom: 30px;
+}
+
+.practice-list-page .hero .hero__title {
+  margin-bottom: 7px;
+}
+
+.practice-list-page .hero .hero__body {
+  padding-bottom: 32px;
+}
+
+.practice-list-page > .text-block {
+  margin-bottom: 19px;
+}
+
+.practice-list-page > .text-block .text-block__title {
+  margin-bottom: 15px;
+}
+
+.practice-list-page > .text-block .text-block__text {
+  margin-bottom: 45px;
+}
+
+.practice-list-page > .text-block .btn-default {
+  min-width: 331px;
+}
+
+.practice-list-page .main-form .text-block .text-block__title {
+  margin-bottom: 29px;
+}
+
+.practice-list-page .main-form .text-block .text-block__text {
+  max-width: 750px;
+  margin-bottom: 61px;
+}
+
+.practice-list {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  max-width: 2020px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.practice-list__item {
+  position: relative;
+  padding-bottom: 99.2%;
+  color: #fff;
+  display: block;
+}
+
+.practice-list__item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.practice-list__item-img img {
+  -webkit-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+}
+
+.practice-list__item-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .text-content h4 {
     margin-bottom: 28px;
@@ -5633,6 +5719,12 @@ textarea {
 
   .about-page .hero .hero__body {
     padding-bottom: 55px;
+  }
+
+  .practice-list__item:hover .practice-list__item-img img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -6388,6 +6480,23 @@ textarea {
 
   .reviews__bottom .btn-default {
     min-width: 280px;
+  }
+
+  .practice-list-page .hero .hero__title {
+    margin-bottom: 11px;
+  }
+
+  .practice-list-page .hero .hero__body {
+    padding-bottom: 29px;
+  }
+
+  .practice-list-page .main-form .text-block .text-block__text {
+    max-width: 616px;
+    margin-bottom: 37px;
+  }
+
+  .practice-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -7182,6 +7291,45 @@ textarea {
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
+  }
+
+  .practice-list-page .hero {
+    margin-bottom: 3px;
+  }
+
+  .practice-list-page .hero .hero__title {
+    margin-bottom: 6px;
+  }
+
+  .practice-list-page > .text-block {
+    margin-bottom: -8px;
+  }
+
+  .practice-list-page > .text-block .text-block__title {
+    font-size: 42px;
+    line-height: 48px;
+    padding: 0 6px;
+    margin-bottom: 13px;
+  }
+
+  .practice-list-page > .text-block .text-block__text {
+    margin-bottom: 29px;
+  }
+
+  .practice-list-page > .text-block .btn-default {
+    min-width: 280px;
+  }
+
+  .practice-list-page .main-form {
+    padding-bottom: 68px;
+  }
+
+  .practice-list-page .main-form .text-block .text-block__title {
+    margin-bottom: 28px;
+  }
+
+  .practice-list__item {
+    padding-bottom: 95.9%;
   }
 }
 
