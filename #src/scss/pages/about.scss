@@ -1,0 +1,19 @@
+.about-page {
+    & .main-form {
+        @media (max-width: $md3+px) {
+            padding-bottom: 71px;
+        }
+        & .text-block__title  {
+            @media (max-width: $md3+px) {
+                margin-bottom: 28px;
+            }
+        }
+        & .text-block__text {
+            max-width: 750px;
+
+            @media (max-width: $md2+px) {
+                max-width: 616px;
+            }
+        }
+    }
+}

@@ -286,6 +286,12 @@ textarea {
 	font-size: 51px;
 	line-height: 1.16em;
 	text-transform: capitalize;
+	display: flex;
+	flex-direction: column;
+
+	& > strong {
+		font-weight: 400;
+	}
 
 	@media (max-width: $md2+px) {
 		font-size: 42px;
@@ -445,7 +451,7 @@ button.btn-default {
 	font-weight: 500;
 
 	@media (max-width: $md2+px) {
-		background: #F5F0E9;
+		background: #f5f0e9;
 		min-height: 58px;
 	}
 
@@ -469,7 +475,7 @@ button.btn-default {
 	resize: none;
 
 	@media (max-width: $md2+px) {
-		background: #F5F0E9;
+		background: #f5f0e9;
 		height: 168px;
 		padding: 17px 27px;
 	}
@@ -499,7 +505,7 @@ button.btn-default {
 			width: 28px;
 			border-radius: 50%;
 			background-color: #fff;
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 
 			@media (min-width: 992px) {
 				&:hover {
@@ -523,10 +529,38 @@ button.btn-default {
 	& h1 {
 	}
 	& h2 {
+		font-family: $titleFontFamily;
+		font-weight: 400;
+		font-size: 65px;
+		line-height: 75px;
 	}
 	& h3 {
+		font-family: $titleFontFamily;
+		font-weight: 400;
+		font-size: 51px;
+		line-height: 59px;
 	}
 	& h4 {
+		font-family: $titleFontFamily;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 131%;
+		color: $mainColor2;
+		text-transform: capitalize;
+		margin-bottom: 36px;
+
+		@media (min-width: 768px) {
+			margin-bottom: 28px;
+			font-size: 30px;
+			line-height: 124%;
+			text-transform: none;
+		}
+		@media (min-width: 992px) {
+			margin-bottom: 25px;
+			font-size: 42px;
+			line-height: 120%;
+			text-transform: capitalize;
+		}
 	}
 
 	& h5 {
@@ -546,6 +580,42 @@ button.btn-default {
 
 	& figure {
 	}
+
+	& hr {
+		display: block;
+		width: 89px;
+		height: 3px;
+		background-color: $mainColor;
+		margin-bottom: 30px;
+		display: inline-block;
+
+		@media (min-width: 768px) {
+			margin-bottom: 23px;
+		}
+		@media (min-width: 992px) {
+			margin-bottom: 25px;
+		}
+
+		& + p {
+
+			@media (min-width: 992px) {
+
+				margin-top: -10px;
+			}
+		}
+	}
+
+	& .col-2 {
+		@media (min-width: 992px) {
+			text-align: left;
+			column-count: 2;
+			column-gap: 36px;
+		}
+
+		@media (max-width: $md3+px) {
+			text-align: left;
+		}
+	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
 
@@ -559,12 +629,14 @@ button.btn-default {
 @import "../common/main-form/main-form";
 @import "../common/testimonial-text/testimonial-text";
 @import "../common/rating/rating";
+@import "../common/hero/hero";
+@import "../common/text-intro-block/text-intro-block";
+@import "../common/result-v2/result-v2";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 
-// ==== HOME =====================================================
 @import "pages/home";
-// ==== AND HOME =====================================================
+@import "pages/about";
 
 // ==== AND PAGES =====================================================

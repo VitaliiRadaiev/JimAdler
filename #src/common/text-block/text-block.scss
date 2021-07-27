@@ -9,6 +9,78 @@
         padding: 50px 0 58px;
     }
 
+    &.text-block_v2 {
+        padding-top: 3px;
+        padding-bottom: 43px;
+
+        @media (max-width: $md2+px) {
+            padding-top: 1px;
+            margin-bottom: 22px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 54px;
+        }
+
+        & .container-md {
+            max-width: 1285px;
+        }
+
+        & .text-block__text  {
+            max-width: none;
+
+            @media (max-width: $md2+px) {
+                margin: 0 -5px;
+
+                & .col-2 {
+                    & p:first-child {
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                & .col-2 {
+                    padding-right: 12px;
+
+                    & p:first-child {
+                        padding-right: 5px;
+                    }
+                    & p:last-child {
+                        padding-right: 12px;
+                    }
+                }
+            }
+        }
+
+        & .text-block__title.title-3 {
+            font-size: 51px;
+            line-height: 59px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 59px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 42px;
+                line-height: 48px;
+                margin-bottom: 33px;
+            }
+        }
+
+        & .line-decor {
+            margin-bottom: 40px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 46px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 37px;
+            }
+        }
+    }
+
     &__title {
         color: $mainColor2;
         margin-bottom: 38px;

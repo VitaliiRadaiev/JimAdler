@@ -16,7 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     z-index: 49;
 
     @media (max-width: $md2+px) {
@@ -320,10 +320,8 @@
     }
 
     &__list {
-
         @media (min-width: 992px) {
             display: flex;
-
         }
 
         & > li {
@@ -332,6 +330,10 @@
                     margin-right: 39px;
                     margin-bottom: 0;
                 }
+            }
+
+            @media (min-width: 992px) {
+                padding: 7px 0px;
             }
 
             @media (max-width: $md2+px) {
@@ -347,7 +349,7 @@
         text-transform: uppercase;
         color: $textLightColor;
         transition: all 0.3s ease;
-
+        
         @media (min-width: 992px) {
             white-space: nowrap;
             &:hover:not(.current-menu-item) {
@@ -358,13 +360,103 @@
         @media (max-width: 1060px) {
             font-size: 16px;
         }
-        
+
         @media (max-width: $md2+px) {
             font-size: 18px;
         }
 
         &.current-menu-item {
             //color: $mainColor;
+        }
+    }
+}
+
+.menu-item-has-children {
+    position: relative;
+
+    & .menu__link {
+        position: relative;
+        z-index: 2;
+    }
+    
+    @media (min-width: 992px) {
+        &:hover {
+            & .sub-menu {
+                display: block;
+            }
+        }
+    }
+}
+
+.sub-menu {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 285px;
+    background: #ffffff;
+    padding: 8px 4px 8px 10px;
+    animation: subMenuAnim 0.4s ease;
+
+    // &:before {
+    //     position: absolute;
+    //     content: '';
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 40px;
+    //     transform: translateY(-100%);
+    // }
+
+    @keyframes subMenuAnim {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to { transform: translateY(0px); opacity: 1;}
+    }
+
+
+    &__link {
+        display: flex;
+        min-height: 44px;
+        color: $textColor;
+        padding: 8px 12px;
+        align-items: center;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        margin-right: 3px;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor;
+                color: $textLightColor;
+            }
+        }
+    }
+
+    &__list {
+        max-height: 136px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #b91216;
+            border-radius: 10px;
+
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b3afb3;
+        }
+        &::-webkit-scrollbar-track {
+            background: #e7e7e7;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 0px 0px #f0f0f0;
         }
     }
 }
