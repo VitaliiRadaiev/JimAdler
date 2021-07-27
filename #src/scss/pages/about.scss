@@ -1,4 +1,35 @@
 .about-page {
+    & .hero {
+        & .hero__title {
+            &.title-3 {
+                line-height: 116%;
+                font-size: 51px;
+                padding: 0 10px;
+    
+                @media (min-width: 768px) {
+                    line-height: 120%;
+                    margin-bottom: 11px;
+                }
+                
+                @media (min-width: 992px) {
+                    margin-bottom: 0;
+                    line-height: 1.16em;
+                }
+            }
+        }
+
+        & .hero__body  {
+            padding-bottom: 53px;
+
+            @media (min-width: 768px) {
+                padding-bottom: 31px;
+            }
+
+            @media (min-width: 992px) {
+                padding-bottom: 55px;
+            }
+        }
+    }
     & .main-form {
         @media (max-width: $md3+px) {
             padding-bottom: 71px;
