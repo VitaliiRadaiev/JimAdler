@@ -10,6 +10,166 @@
         padding: 69px 0 74px;
     }
 
+    &.result_v2 {
+        @media (max-width: $md2+px) {
+            padding-top: 119px;
+            padding-bottom: 19px;
+        }
+
+        @media (max-width: $md3+px) {
+            border-top: 3px solid #fff;
+            padding-top: 66px;
+            padding-bottom: 30px;
+        }
+        & .result__body {
+            @media (min-width: 1268px) {
+                transform: translateX(26px);
+            }
+
+            @media (max-width: $md2+px) {
+                &.container-md {
+                    padding: 0 46px;
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                &.container-md {
+                    padding: 0 40px;
+                }
+            }
+        }
+        & .result__bg img {
+            display: none;
+        }
+
+        & .result__col-1 {
+            @media (max-width: $md2+px) {
+                text-align: left;
+                margin-bottom: 60px;
+
+                & .btn-default {
+                    min-width: 257px;
+                    min-height: 60px;
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                text-align: center;
+                margin-bottom: 81px;
+            }
+        }
+
+        & .result__title {
+            @media (max-width: $md2+px) {
+                text-align: left;
+                margin-bottom: 15px;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 46px;
+                letter-spacing: 2.5px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 33px;
+                letter-spacing: 0.2px;
+                margin-bottom: 34px;
+            }
+        }
+
+        & .result__flex-wrap {
+            @media (max-width: $md2+px) {
+                display: block;
+            }
+        }
+
+        & .result__text {
+            @media (max-width: $md2+px) {
+                display: block;
+                max-width: 722px;
+                text-align: left;
+                margin-bottom: 38px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 42px;
+                line-height: 48px;
+                margin-bottom: 55px;
+            }
+        }
+
+        & .result__slider {
+            @media (max-width: $md2+px) {
+                & .swiper-wrapper {
+                    flex-wrap: wrap;
+                }
+
+                & .swiper-slide {
+                    height: auto;
+                    flex: 0 1 50%;
+                    text-align: left;
+                    margin-bottom: 125px;
+
+                    &:nth-child(even) {
+                        transform: translateX(17px);
+                    }
+
+                    &:nth-last-child(-n + 2) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                & .swiper-wrapper {
+                    display: block;
+                }
+
+                & .swiper-slide {
+                    text-align: center;
+                    margin-bottom: 82px !important;
+
+                    &:nth-child(even) {
+                        transform: translateX(0px);
+                    }
+
+                    &:nth-child(3) {
+                        margin-bottom: 112px !important;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0 !important;
+                    }
+                }
+
+                // &:nth-child(1) {
+                //     transform: translateX(0px);
+                // }
+
+                // &:nth-child(4) {
+                //     transform: translateX(0px);
+                // }
+            }
+        }
+
+        & .result__num {
+            @media (max-width: $md2+px) {
+                margin-bottom: 5px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 12px;
+            }
+        }
+
+        & .result__btn-group {
+            display: none;
+        }
+    }
+
     &__bg {
         position: absolute;
         top: 0;

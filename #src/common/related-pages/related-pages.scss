@@ -1,0 +1,125 @@
+.related-pages {
+    position: relative;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 51px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #000;
+    }
+
+    &__body {
+        color: $textLightColor;
+        padding-top: 154px;
+        padding-bottom: 100px;
+
+        @media (min-width: 992px) {
+            min-height: 570px;
+
+            display: flex;
+        }
+
+        @media (min-width: 1268px) {
+            transform: translateX(40px);
+        }
+
+        @media (max-width: $md2+px) {
+            padding: 28px 36px 23px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 37px 19px 20px !important;
+        }
+    }
+
+    &__title {
+        flex: 0 0 auto;
+        margin-right: 47px;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+            font-size: 63px;
+            line-height: 73px;
+            margin-bottom: 29px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 42px;
+            line-height: 48px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    }
+
+    &__list {
+        @media (min-width: 992px) {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            height: 100%;
+        }
+
+        @media (max-width: $md3+px) {
+            margin: 0 -19px;
+        }
+
+        & > li {
+            flex: 0 1 50%;
+            align-items: flex-start;
+            margin-bottom: 5px;
+
+            &:nth-child(even) {
+                @media (min-width: 1268px) {
+                    transform: translateX(24px);
+                }
+            }
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 14px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 52px;
+        padding: 8px 26px;
+        color: $textLightColor;
+        transition: all 0.3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                &:not(.active) {
+                    color: $mainColor2;
+                }
+            }
+        }
+
+        &.active {
+            background-color: $mainColor;
+        }
+
+        @media (max-width: $md2+px) {
+            display: flex;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 140%;
+            padding: 8px 18px;
+        }
+    }
+}
