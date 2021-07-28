@@ -1,0 +1,308 @@
+.attorneys-page {
+    & .hero {
+        margin-bottom: 50px;
+        @media (min-width: 992px) {
+            margin-bottom: 80px;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 62px;
+        }
+
+        & .hero__title {
+            margin-bottom: 6px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 12px;
+            }
+            &.title-3 {
+            }
+        }
+
+        & .hero__body {
+            padding-bottom: 34px;
+
+            @media (min-width: 768px) {
+                padding-bottom: 31px;
+            }
+
+            @media (min-width: 992px) {
+                padding-bottom: 34px;
+            }
+        }
+    }
+    & .main-form {
+        @media (max-width: $md3+px) {
+            padding-bottom: 71px;
+        }
+        & .text-block__title {
+            @media (max-width: $md3+px) {
+                margin-bottom: 28px;
+            }
+        }
+        & .text-block__text {
+            max-width: 750px;
+
+            @media (max-width: $md2+px) {
+                max-width: 616px;
+            }
+        }
+    }
+}
+
+.attorneys {
+    margin-bottom: 100px;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 69px;
+    }
+    @media (max-width: $md3+px) {
+        margin-bottom: 51px;
+    }
+
+    & .container-md {
+        max-width: 1300px;
+
+        @media (max-width: $md3+px) {
+            padding: 0 18px !important;
+        }
+    }
+
+    &__top {
+        text-align: center;
+        margin-bottom: 80px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 67px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+
+        & .btn-default {
+            min-width: 302px;
+
+            @media (max-width: $md2+px) {
+                min-width: 260px;
+            }
+            
+            @media (max-width: $md3+px) {
+                min-width: 280px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px 58px;
+
+        @media (max-width: $md2+px) {
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 9px;
+        }
+
+        & > li {
+            flex: 0 1 33.3333%;
+            padding: 0 15px;
+            margin-bottom: 60px;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+                max-width: 371px;
+                margin-bottom: 40px;
+
+                &:empty {
+                    display: none;
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                &:nth-child(n+3) {
+                   & .attorney-card__name {
+                    font-size: 22px;
+                    line-height: 25px;
+                    margin-bottom: 10px;
+                   }
+
+                   & .attorney-card__text {
+                       margin-bottom: 18px;
+                   }
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                flex: 0 1 100%;
+                margin: 0 auto 50px;
+                max-width: 369px;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        font-family: $titleFontFamily;
+        font-size: 26px;
+        line-height: 131%;
+        color: #000000;
+        margin: 0 auto;
+        max-width: 951px;
+
+        @media (max-width: $md3+px) {
+            padding: 0 10px;
+            text-transform: capitalize;
+        }
+
+        & p {
+            &:not(:last-child) {
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
+
+.attorney-card {
+    position: relative;
+
+    @media (min-width: 768px) {
+        &:hover {
+            & .attorney-card__hover-box {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__img {
+        height: 440px;
+        margin-bottom: 24px;
+
+        @media (max-width: $md2+px) {
+            height: 395px;
+            margin-bottom: 11px;
+        }
+        @media (max-width: $md3+px) {
+            height: 393px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__name {
+        font-family: $titleFontFamily;
+        font-size: 30px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    &__position {
+        margin-top: 3px;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: $mainColor2;
+
+        @media (max-width: $md2+px) {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__hover-box {
+        @media (min-width: 768px) {
+            position: absolute;
+            z-index: 4;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 440px;
+            background-color: rgba(#000, 0.9);
+            color: $textLightColor;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 44px 30px 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            &:before {
+                position: absolute;
+                content: "";
+                pointer-events: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 2px solid $mainColor2;
+                width: calc(100% - 28px);
+                height: calc(100% + 22px);
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            height: 395px;
+        }
+
+        @media (max-width: $md3+px) {
+            height: auto;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 22px;
+
+        @media (min-width: 768px) {
+            max-width: 301px;
+            margin: 0 auto 21px;
+            overflow: auto;
+            max-height: 300px;
+            font-size: 19px;
+            line-height: 24px;
+    
+    
+            &::-webkit-scrollbar {
+                width: 2px;
+                height: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #b91216;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #b3afb3;
+            }
+            &::-webkit-scrollbar-track {
+                background: #e7e7e7;
+                border-radius: 10px;
+                box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+            }
+        }
+    }
+
+    &__btn {
+        align-self: center;
+
+        &.btn-default {
+            min-width: 170px;
+            min-height: 54px;
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 24px;
+        }
+    }
+}
