@@ -1342,6 +1342,20 @@ function setrating(th, val) {
             
         }
 	}
+
+    let bg = document.querySelector('.about-us-block__bg img');
+    let items = document.querySelectorAll('.about-us-block__slider .swiper-slide');
+    if(items.length && bg) {
+        items.forEach(item => {
+            let url = item.dataset.hoverBg;
+
+            item.addEventListener('mouseenter', () => {
+                if(document.documentElement.clientWidth > 991.98){
+                    bg.src = url;
+                }
+            })
+        })
+    }
 }
 ;
 });
