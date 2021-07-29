@@ -16,6 +16,24 @@
         text-align: center;
     }
 
+    &.main-form_v2 {
+        @media (max-width: $md3+px) {
+            padding-bottom: 71px;
+        }
+        & .text-block__title {
+            @media (max-width: $md3+px) {
+                margin-bottom: 28px;
+            }
+        }
+        & .text-block__text {
+            max-width: 750px;
+
+            @media (max-width: $md2+px) {
+                max-width: 616px;
+            }
+        }
+    }
+
     & .container-sm {
         max-width: 1210px;
 

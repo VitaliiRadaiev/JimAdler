@@ -4002,6 +4002,10 @@ textarea {
   padding: 76px 0 76px;
 }
 
+.main-form.main-form_v2 .text-block__text {
+  max-width: 750px;
+}
+
 .main-form .container-sm {
   max-width: 1210px;
 }
@@ -5971,6 +5975,144 @@ textarea {
   max-width: 750px;
 }
 
+.faq-page .hero {
+  margin-bottom: 30px;
+}
+
+.faq-page .hero .hero__title {
+  margin-bottom: 7px;
+}
+
+.faq-page .hero .hero__body {
+  padding-bottom: 32px;
+}
+
+.faq-page > .text-block {
+  margin-bottom: 19px;
+}
+
+.faq-page > .text-block .text-block__title {
+  margin-bottom: 15px;
+}
+
+.faq-page > .text-block .text-block__text {
+  margin-bottom: 45px;
+}
+
+.faq-page > .text-block .btn-default {
+  min-width: 331px;
+}
+
+.faq {
+  margin-bottom: 80px;
+}
+
+.faq__list.container-sm {
+  padding: 0;
+  max-width: 1207px;
+}
+
+.faq__list > li {
+  position: relative;
+  padding: 0 47px;
+}
+
+.faq__list > li:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #bfccd1;
+  opacity: 0.3;
+}
+
+.faq__list-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80px;
+  padding: 10px 80px 10px 27px;
+  cursor: pointer;
+}
+
+.faq__list-title:before {
+  position: absolute;
+  content: "";
+  top: 32px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #AD7D45;
+}
+
+.faq__list-title .plus {
+  position: absolute;
+  top: 50%;
+  right: 42px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.faq__list-title._active .plus::before {
+  height: 0;
+}
+
+.faq__list-text {
+  display: none;
+  padding: 0 0 21px 28px;
+  max-width: 978px;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.plus {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.plus:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #bfccd1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.plus:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background: #bfccd1;
+}
+
 @media (min-width: 768px) {
   .text-content h4 {
     margin-bottom: 28px;
@@ -7432,6 +7574,10 @@ textarea {
     padding: 50px 0 60px;
   }
 
+  .main-form.main-form_v2 .text-block__text {
+    max-width: 616px;
+  }
+
   .main-form .text-block {
     margin-bottom: 30px;
   }
@@ -8248,6 +8394,47 @@ textarea {
   .locations-datail-page .main-form .text-block__text {
     max-width: 616px;
   }
+
+  .faq-page .hero .hero__title {
+    margin-bottom: 11px;
+  }
+
+  .faq-page .hero .hero__body {
+    padding-bottom: 29px;
+  }
+
+  .faq-page > .text-block .text-block__title {
+    font-size: 51px;
+    line-height: 59px;
+  }
+
+  .faq {
+    margin-bottom: 68px;
+  }
+
+  .faq__list.container-sm {
+    padding: 0 40px;
+    max-width: 1287px;
+  }
+
+  .faq__list > li {
+    padding: 0 0px 0 18px;
+  }
+
+  .faq__list-title {
+    min-height: 81px;
+  }
+
+  .faq__list-title .plus {
+    right: 2px;
+  }
+
+  .faq__list-text {
+    max-width: 675px;
+    text-transform: none;
+    font-size: 22px;
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -8696,6 +8883,14 @@ textarea {
   .main-form {
     padding-top: 10px;
     text-align: center;
+  }
+
+  .main-form.main-form_v2 {
+    padding-bottom: 71px;
+  }
+
+  .main-form.main-form_v2 .text-block__title {
+    margin-bottom: 28px;
   }
 
   .main-form .text-block {
@@ -9708,6 +9903,59 @@ textarea {
 
   .locations-datail-page .main-form .text-block__title {
     margin-bottom: 28px;
+  }
+
+  .faq-page .hero {
+    margin-bottom: 3px;
+  }
+
+  .faq-page .hero .hero__title {
+    margin-bottom: 6px;
+  }
+
+  .faq-page > .text-block {
+    margin-bottom: -8px;
+  }
+
+  .faq-page > .text-block .text-block__title {
+    font-size: 42px;
+    line-height: 48px;
+    padding: 0 6px;
+    margin-bottom: 13px;
+  }
+
+  .faq-page > .text-block .text-block__text {
+    margin-bottom: 29px;
+  }
+
+  .faq-page > .text-block .btn-default {
+    min-width: 280px;
+  }
+
+  .faq {
+    margin-bottom: 48px;
+  }
+
+  .faq__list.container-sm {
+    padding: 0 0px;
+  }
+
+  .faq__list > li {
+    padding: 0 30px 0 33px;
+  }
+
+  .faq__list-title {
+    font-size: 20px;
+    line-height: 26px;
+    min-height: 106px;
+    padding-right: 30px;
+  }
+
+  .faq__list-text {
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: -7px;
+    padding-bottom: 13px;
   }
 }
 
