@@ -1,0 +1,221 @@
+.locations-page {
+    & .hero {
+        margin-bottom: 30px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 3px;
+        }
+        & .hero__title {
+            margin-bottom: 7px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 11px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 6px;
+            }
+        }
+        & .hero__body {
+            padding-bottom: 32px;
+
+            @media (max-width: $md2+px) {
+                padding-bottom: 29px;
+            }
+        }
+    }
+
+    & > .text-block {
+        margin-bottom: 19px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: -8px;
+        }
+
+        & .text-block__title {
+            margin-bottom: 15px;
+
+            @media (max-width: $md2+px) {
+                font-size: 51px;
+                line-height: 59px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 42px;
+                line-height: 48px;
+                padding: 0 6px;
+                margin-bottom: 13px;
+            }
+        }
+
+        & .text-block__text {
+            margin-bottom: 45px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 29px;
+            }
+        }
+
+        & .btn-default {
+            min-width: 331px;
+
+            @media (max-width: $md3+px) {
+                min-width: 280px;
+            }
+        }
+    }
+
+    & .main-form {
+        @media (max-width: $md3+px) {
+            padding-bottom: 71px;
+        }
+        & .text-block__title {
+            @media (max-width: $md3+px) {
+                margin-bottom: 28px;
+            }
+        }
+        & .text-block__text {
+            max-width: 750px;
+
+            @media (max-width: $md2+px) {
+                max-width: 616px;
+            }
+        }
+    }
+}
+
+.locations {
+    max-width: 1920px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    @media (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 69px;
+    }
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 35px;
+    }
+
+    &__item {
+        flex: 0 1 calc(50% - 1px);
+        margin-bottom: 70px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 41px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.locations-card {
+    &__img {
+        height: 444px;
+        margin-bottom: 25px;
+    }
+
+    &__text-wrap {
+        padding: 0 29px;
+
+        @media (max-width: $md2+px) {
+            padding: 0 24px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 0 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 12px;
+        display: block;
+        transition: all .3s ease;
+        
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor2;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            font-size: 26px;
+            line-height: 33px;
+            margin-bottom: 13px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
+        max-width: 378px;
+        margin-bottom: 16px;
+
+        & > strong {
+            font-weight: 400;
+        }
+
+        @media (max-width: $md2+px) {
+            line-height: 120%;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 17px;
+            max-width: 277px;
+
+            & > strong {
+                display: block;
+            }
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 116px;
+        min-height: 38px;
+        padding: 8px 10px;
+        transition: all 0.3s ease;
+        margin-right: 7px;
+        margin-top: 12px;
+        border: 1px solid $mainColor;
+        font-size: 15px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: $mainColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor;
+                color: $textLightColor;
+            }
+        }
+    }
+}

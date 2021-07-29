@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	@@include('common/header/_header.html',{})
+	<!-- == // TOP LINE ================== -->
+
+
+	<main class="_page locations-page _padding-top">
+        <section class="hero">
+            <div class="hero__bg ibg">
+                <picture>
+                    <source  srcset="img/photo/hero-bg-6-mob.png"  media="(max-width: 767.98px)" >
+                    <source  srcset="img/photo/hero-bg-6-tablet.png"  media="(max-width: 991.98px)" >
+                    <img src="img/photo/hero-bg-6.png" alt="img">
+                </picture>
+            </div>
+            <div class="hero__body container-md">
+                <h3 class="hero__title title-3">Our Locations</h3>
+                <div class="hero__subtitle">That's the adler advantage</div>
+            </div>
+        </section>
+
+        <section class="text-block">
+			<div class="container-md">
+				<h3 class="text-block__title title-3">
+					Locations
+				</h3>
+				<div class="text-block__text text-content">
+                    With four, full-service locations in Houston, Dallas, San Antonio, and Channelview, Jim Adler & Associates has an office near you. Business hours may vary between locations but they are listed below for your convenience. Though we do accept walk-in visits, please call ahead to schedule an appointment.				</div>
+				<a href="#" class="btn-default">
+					Get a free consultation
+				</a>
+			</div>
+		</section>
+
+        <section class="locations">
+            <div class="locations__item">
+                <div class="locations-card">
+                    <div class="locations-card__img ibg">
+                        <a href="#">
+                            <img src="img/photo/locations-img-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="locations-card__text-wrap">
+                        <a href="#" class="locations-card__title">
+                            Houston Law Office
+                        </a>
+                        <div class="locations-card__text">
+                            1900 W Loop S 20th Floor, Houston, TX 77027 <strong>Phone: (877) 754-3281</strong>
+                        </div>
+                        <a href="#" class="locations-card__btn">
+                            Directions
+                        </a>
+                        <a href="#" class="locations-card__btn">
+                            Virtual Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="locations__item">
+                <div class="locations-card">
+                    <div class="locations-card__img ibg">
+                        <a href="#">
+                            <img src="img/photo/locations-img-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="locations-card__text-wrap">
+                        <a href="#" class="locations-card__title">
+                            Channelview Law Office
+                        </a>
+                        <div class="locations-card__text">
+                            12605 East Fwy Suite 400, Houston, TX 77015 <strong>Phone: (877) 754-3281</strong>                        </div>
+                        <a href="#" class="locations-card__btn">
+                            Directions
+                        </a>
+                        <a href="#" class="locations-card__btn">
+                            Virtual Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="locations__item">
+                <div class="locations-card">
+                    <div class="locations-card__img ibg">
+                        <a href="#">
+                            <img src="img/photo/locations-img-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="locations-card__text-wrap">
+                        <a href="#" class="locations-card__title">
+                            Dallas Law Office
+                        </a>
+                        <div class="locations-card__text">
+                            2711 N Haskell Ave. Suite 2500, Dallas, TX 75204<strong>Phone: (877) 754-3281</strong>                        </div>
+                        <a href="#" class="locations-card__btn">
+                            Directions
+                        </a>
+                        <a href="#" class="locations-card__btn">
+                            Virtual Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="locations__item">
+                <div class="locations-card">
+                    <div class="locations-card__img ibg">
+                        <a href="#">
+                            <img src="img/photo/locations-img-4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="locations-card__text-wrap">
+                        <a href="#" class="locations-card__title">
+                            San Antonio Law Office
+                        </a>
+                        <div class="locations-card__text">
+                            7330 San Pedro Ave Suite 700, San Antonio, TX 78216 <strong>Phone: (877) 754-3281</strong>                        </div>
+                        <a href="#" class="locations-card__btn">
+                            Directions
+                        </a>
+                        <a href="#" class="locations-card__btn">
+                            Virtual Tour
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+		<section class="main-form">
+			<div class="container-sm">
+				<div class="text-block">
+					<h2 class="text-block__title title-2">
+						Free Case Review
+					</h2>
+					<div class="line-decor">
+						<img src="img/icons/line.svg" alt="">
+					</div>
+					<div class="text-block__text text-content">
+						We only get paid if we win your case, so you know we will do our best to fight for you.
+					</div>
+				</div>
+				<div class="main-form__group">
+					<div class="main-form__item">
+						<input class="input" type="text" placeholder="Full name">
+					</div>
+					<div class="main-form__item">
+						<input class="input" type="text" placeholder="Phone">
+					</div>
+					<div class="main-form__item">
+						<input class="input" type="text" placeholder="Email">
+					</div>
+					<div class="main-form__item main-form__item-full-width">
+						<textarea class="textarea" placeholder="Tell us about your case…"></textarea>
+					</div>
+				</div>
+
+				<button type="submit" class="btn-default">
+					Send Message
+				</button>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- == FOOTER ================== -->
+	@@include('common/footer/_footer.html',{})
+	<!-- == // FOOTER ================== -->
+	@@include('common/popup/_popup.html',{})
+
+	@@include('_js.html',{})
+</body>
+
+</html>

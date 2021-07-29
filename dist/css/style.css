@@ -5768,6 +5768,113 @@ textarea {
   margin-bottom: 57px;
 }
 
+.locations-page .hero {
+  margin-bottom: 30px;
+}
+
+.locations-page .hero .hero__title {
+  margin-bottom: 7px;
+}
+
+.locations-page .hero .hero__body {
+  padding-bottom: 32px;
+}
+
+.locations-page > .text-block {
+  margin-bottom: 19px;
+}
+
+.locations-page > .text-block .text-block__title {
+  margin-bottom: 15px;
+}
+
+.locations-page > .text-block .text-block__text {
+  margin-bottom: 45px;
+}
+
+.locations-page > .text-block .btn-default {
+  min-width: 331px;
+}
+
+.locations-page .main-form .text-block__text {
+  max-width: 750px;
+}
+
+.locations {
+  max-width: 1920px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.locations__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 1px);
+          flex: 0 1 calc(50% - 1px);
+  margin-bottom: 70px;
+}
+
+.locations-card__img {
+  height: 444px;
+  margin-bottom: 25px;
+}
+
+.locations-card__text-wrap {
+  padding: 0 29px;
+}
+
+.locations-card__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 12px;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.locations-card__text {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+  max-width: 378px;
+  margin-bottom: 16px;
+}
+
+.locations-card__text > strong {
+  font-weight: 400;
+}
+
+.locations-card__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 116px;
+  min-height: 38px;
+  padding: 8px 10px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-right: 7px;
+  margin-top: 12px;
+  border: 1px solid #B91216;
+  font-size: 15px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #B91216;
+}
+
 @media (min-width: 768px) {
   .text-content h4 {
     margin-bottom: 28px;
@@ -6616,6 +6723,23 @@ textarea {
 
   .attorneys-detail__body {
     padding-left: 488px;
+  }
+
+  .locations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .locations-card__title:hover {
+    color: #AD7D45;
+  }
+
+  .locations-card__btn:hover {
+    background-color: #B91216;
+    color: #fff;
   }
 }
 
@@ -7902,6 +8026,45 @@ textarea {
 
   .attorneys-detail__aside-text:last-of-type {
     margin-bottom: 68px;
+  }
+
+  .locations-page .hero .hero__title {
+    margin-bottom: 11px;
+  }
+
+  .locations-page .hero .hero__body {
+    padding-bottom: 29px;
+  }
+
+  .locations-page > .text-block .text-block__title {
+    font-size: 51px;
+    line-height: 59px;
+  }
+
+  .locations-page .main-form .text-block__text {
+    max-width: 616px;
+  }
+
+  .locations {
+    margin-bottom: 69px;
+  }
+
+  .locations__item {
+    margin-bottom: 60px;
+  }
+
+  .locations-card__text-wrap {
+    padding: 0 24px;
+  }
+
+  .locations-card__title {
+    font-size: 26px;
+    line-height: 33px;
+    margin-bottom: 13px;
+  }
+
+  .locations-card__text {
+    line-height: 120%;
   }
 }
 
@@ -9247,6 +9410,74 @@ textarea {
 
   .attorneys-detail__aside-text:last-of-type {
     margin-bottom: 53px;
+  }
+
+  .locations-page .hero {
+    margin-bottom: 3px;
+  }
+
+  .locations-page .hero .hero__title {
+    margin-bottom: 6px;
+  }
+
+  .locations-page > .text-block {
+    margin-bottom: -8px;
+  }
+
+  .locations-page > .text-block .text-block__title {
+    font-size: 42px;
+    line-height: 48px;
+    padding: 0 6px;
+    margin-bottom: 13px;
+  }
+
+  .locations-page > .text-block .text-block__text {
+    margin-bottom: 29px;
+  }
+
+  .locations-page > .text-block .btn-default {
+    min-width: 280px;
+  }
+
+  .locations-page .main-form {
+    padding-bottom: 71px;
+  }
+
+  .locations-page .main-form .text-block__title {
+    margin-bottom: 28px;
+  }
+
+  .locations {
+    margin-bottom: 35px;
+  }
+
+  .locations__item {
+    margin-bottom: 41px;
+  }
+
+  .locations__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .locations-card__text-wrap {
+    padding: 0 20px;
+  }
+
+  .locations-card__title {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 14px;
+  }
+
+  .locations-card__text {
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 17px;
+    max-width: 277px;
+  }
+
+  .locations-card__text > strong {
+    display: block;
   }
 }
 
