@@ -9,6 +9,90 @@
         margin-bottom: 100.5px;
     }
 
+    &.text-intro-block_v2 {
+        @media (min-width: 992px) {
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        & .text-intro-block__img {
+            height: 637px;
+            margin-bottom: 10px;
+
+            @media (min-width: 992px) {
+                margin-right: 61px;
+                width: 560px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    right: 218px;
+                    z-index: -1;
+                    width: 3000px;
+                    height: 1000px;
+                    background: #ebebeb;
+                }
+            }
+
+            @media (max-width: $md2+px) {
+                height: 490px;
+                margin: 0 0 52px;
+                & img {
+                    left: 50%;
+                    width: 100vw;
+                    transform: translateX(-50%);
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                width: 100%;
+                height: 442px;
+            }
+        }
+
+        & .text-intro-block__body {
+            @media (max-width: $md2+px) {
+                display: block;
+                text-align: center;
+            }
+
+            &.container-sm {
+                max-width: 1309px;
+            }
+
+            & h2 {
+                @media (max-width: $md2+px) {
+                    margin-bottom: 22px;
+                }
+
+                @media (max-width: $md3+px) {
+                    font-size: 42px;
+                    line-height: 48px;
+                }
+            }
+
+            & p {
+                padding-right: 27px;
+            }
+        }
+
+        & + .text-block {
+            & > .container-md {
+                max-width: 1245px;
+            }
+
+            & .text-block__text {
+                margin-bottom: 57px;
+
+                @media (max-width: $md2+px) {
+                    & p {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
     &__body {
         padding-top: 1px;
         display: flex;
@@ -16,11 +100,15 @@
 
         &.container-sm {
             max-width: 1272px;
-  
         }
         @media (min-width: 992px) {
             min-height: 649px;
             display: block;
+        }
+
+        & h2 {
+            color: $mainColor2;
+            margin-bottom: 26px;
         }
 
         & h4 {
@@ -35,6 +123,7 @@
         }
 
         & p {
+            margin-bottom: 1.43em;
             @media (min-width: 992px) {
                 padding-right: 36px;
             }
@@ -97,7 +186,6 @@
             transform: translate(-50%, 44%);
         }
 
-
         & p {
             margin-bottom: 0;
             text-transform: uppercase;
@@ -116,6 +204,14 @@
                 font-size: 26px;
                 line-height: 1em;
             }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+
+        & .btn-default {
+            min-width: 340px;
         }
     }
 }

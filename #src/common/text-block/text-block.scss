@@ -37,7 +37,13 @@
             max-width: 1285px;
         }
 
-        & .text-block__text  {
+        & .text-content {
+            & p {
+                margin-bottom: 1.43em;
+            }
+        }
+
+        & .text-block__text {
             max-width: none;
 
             @media (max-width: $md2+px) {
@@ -90,6 +96,19 @@
                 margin-bottom: 37px;
             }
         }
+
+        & .text-block__bottom {
+            & .btn-default {
+                min-width: 340px;
+
+                @media (max-width: $md3+px) {
+                    min-width: 280px;
+                    min-height: 54px;
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+            }
+        }
     }
 
     &.text-block_v3 {
@@ -137,7 +156,6 @@
                         @media (max-width: $md3+px) {
                             margin-bottom: 27px;
                         }
-    
                     }
 
                     @media (max-width: $md2+px) {
@@ -159,7 +177,7 @@
 
                             @media (max-width: $md3+px) {
                                 margin-top: 50px;
-                                }
+                            }
                         }
                     }
                     &:nth-of-type(3) {
@@ -185,38 +203,35 @@
                         }
                     }
 
-                   & > p {
-                       @media (min-width: 992px) {
-                           padding-right: 20px;
-                       }
-                   }
-
-                   & ~ h3 {
-                       margin-top: 62px;
-
-                       @media (max-width: $md2+px) {
-                           margin-top: 104px;
-                       }
-                       @media (max-width: $md3+px) {
-                        margin-top: 50px;
+                    & > p {
+                        @media (min-width: 992px) {
+                            padding-right: 20px;
                         }
+                    }
 
-                       
-                   }
+                    & ~ h3 {
+                        margin-top: 62px;
 
-                   & ul > li {
-                
-                       @media (min-width: 992px) {
-                           padding-right: 40px;
-                       }
-                   }
+                        @media (max-width: $md2+px) {
+                            margin-top: 104px;
+                        }
+                        @media (max-width: $md3+px) {
+                            margin-top: 50px;
+                        }
+                    }
+
+                    & ul > li {
+                        @media (min-width: 992px) {
+                            padding-right: 40px;
+                        }
+                    }
                 }
 
-                &  p {
+                & p {
                     margin-left: auto;
                     margin-right: auto;
                     margin-bottom: 1.42em;
-
+                    max-width: none;
                 }
             }
         }
@@ -274,8 +289,6 @@
         }
     }
 }
-
-
 
 .line-decor {
     height: 12px;

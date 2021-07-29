@@ -336,6 +336,17 @@ textarea {
 	line-height: 28px;
 	text-transform: uppercase;
 
+	&.btn-default_white {
+		background: #FFFFFF;
+		color: $mainColor2;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $textLightColor;
+			}
+		}
+	}
+
 	@media (max-width: $md3+px) {
 		font-size: 18px;
 		line-height: 23px;
@@ -790,5 +801,6 @@ button.btn-default {
 @import "pages/attorneys";
 @import "pages/attorneys-detail";
 @import "pages/locations";
+@import "pages/locations-detail";
 
 // ==== AND PAGES =====================================================
