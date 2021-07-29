@@ -14,10 +14,10 @@
         @media (max-width: $md3+px) {
             margin-bottom: 84px;
         }
-        & .result-v2__title  {
+        & .result-v2__title {
             max-width: none;
         }
-        & .result-v2__text  {
+        & .result-v2__text {
             margin-bottom: 155px;
 
             @media (max-width: $md2+px) {
@@ -66,13 +66,13 @@
                         transform: translateX(32px);
                     }
 
-                    &:nth-child(n+3) {
+                    &:nth-child(n + 3) {
                         margin-bottom: 67px;
                     }
                 }
 
                 @media (max-width: $md3+px) {
-                    transform: translate(0,0) !important;
+                    transform: translate(0, 0) !important;
                     margin-bottom: 67px !important;
 
                     &:nth-last-child(2) {
@@ -91,13 +91,12 @@
         }
 
         & .result-v2-card {
-
             & .result-v2-card__num {
                 @media (max-width: $md3+px) {
                     margin-bottom: 10px;
                 }
             }
-            
+
             & .result-v2-card__hover-box {
                 left: 47%;
                 padding: 28px 21px 35px;
@@ -120,8 +119,6 @@
                 }
             }
         }
-
-
     }
     &__title {
         text-align: center;
@@ -141,6 +138,28 @@
         @media (max-width: $md2+px) {
             max-width: 680px;
             margin: 0 auto 15px;
+        }
+    }
+
+    &__suptitle {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 33px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $mainColor2;
+        text-align: center;
+        margin-bottom: -3px;
+
+        @media (max-width: $md2+px) {
+            letter-spacing: 0;
+            margin-bottom: 18px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 6px;
         }
     }
 
@@ -193,7 +212,7 @@
                 margin-bottom: 159px;
 
                 &:nth-child(even) {
-                    & .result-v2-card{
+                    & .result-v2-card {
                         & .result-v2-card__hover-box {
                             left: 43%;
                         }
@@ -244,7 +263,8 @@
                 opacity: 1;
             }
 
-            & > .result-v2-card__num, & > .result-v2-card__title {
+            & > .result-v2-card__num,
+            & > .result-v2-card__title {
                 opacity: 0;
             }
         }
@@ -333,7 +353,7 @@
             width: 100%;
             width: 353px;
             padding: 35px 48px 32px;
-            transition: all .4s ease;
+            transition: all 0.4s ease;
 
             & .result-v2-card__num {
                 color: $textLightColor;
