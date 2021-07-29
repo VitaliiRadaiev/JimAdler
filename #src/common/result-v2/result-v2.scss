@@ -163,12 +163,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 920px;
-        margin: 0 auto 40px;
+        margin: 0 auto 90px;
         transform: translateX(21px);
 
         @media (max-width: $md2+px) {
             transform: translateX(0px);
-            margin: 0 -62px 40px;
+            margin: 0 -62px 100px;
         }
 
         @media (max-width: $md3+px) {

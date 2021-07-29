@@ -194,3 +194,18 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
       throw err;
     }
 }
+
+function changeImgOnHoverItem(img, items) {
+	if(!img) return new Error('img is undefined');
+	if(!items) return new Error('item is undefined');
+
+	items.forEach(item => {
+		let url = item.dataset.hoverBg;
+
+		item.addEventListener('mouseenter', () => {
+			if(document.documentElement.clientWidth > 991.98){
+				img.src = url;
+			}
+		})
+	})
+}

@@ -220,6 +220,21 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
       let err = new Error('Container not found.');
       throw err;
     }
+}
+
+function changeImgOnHoverItem(img, items) {
+	if(!img) return new Error('img is undefined');
+	if(!items) return new Error('item is undefined');
+
+	items.forEach(item => {
+		let url = item.dataset.hoverBg;
+
+		item.addEventListener('mouseenter', () => {
+			if(document.documentElement.clientWidth > 991.98){
+				img.src = url;
+			}
+		})
+	})
 };
 	// Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
@@ -1345,19 +1360,17 @@ function setrating(th, val) {
 
     let bg = document.querySelector('.about-us-block__bg img');
     let items = document.querySelectorAll('.about-us-block__slider .swiper-slide');
-    if(items.length && bg) {
-        items.forEach(item => {
-            let url = item.dataset.hoverBg;
-
-            item.addEventListener('mouseenter', () => {
-                if(document.documentElement.clientWidth > 991.98){
-                    bg.src = url;
-                }
-            })
-        })
+    if(bg && items.length) {
+        changeImgOnHoverItem(bg, items);
     }
+
 }
 ;
+	let bg = document.querySelector('.related-pages__bg img');
+    let items = document.querySelectorAll('.related-pages__link');
+    if( bg && items.length) {
+        changeImgOnHoverItem(bg, items);
+    };
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -1400,6 +1413,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		setMobileVideoForBanner()
 	}
 });
+
+
 
 //// html example --- <img class="lazy" data-src="https://images.unsplash.com/photo-1606851091851-e8c8c0fca5ba?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" src="img/photo/placeholder.jpg" alt="img">
 

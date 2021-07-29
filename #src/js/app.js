@@ -39,6 +39,7 @@ window.addEventListener('load', function () {
 	@@include('../common/footer/footer.js');
 	
 	@@include('pages/home.js');
+	@@include('pages/practice-detail.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -81,6 +82,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		setMobileVideoForBanner()
 	}
 });
+
+
 
 //@@include('plagins/lazy-load.js');
 

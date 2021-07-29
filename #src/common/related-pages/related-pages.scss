@@ -103,14 +103,12 @@
         @media (min-width: 992px) {
             &:hover {
                 &:not(.active) {
-                    color: $mainColor2;
+                    background-color: $mainColor;
                 }
             }
         }
 
-        &.active {
-            background-color: $mainColor;
-        }
+
 
         @media (max-width: $md2+px) {
             display: flex;
