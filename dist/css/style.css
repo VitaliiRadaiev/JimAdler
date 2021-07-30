@@ -4231,6 +4231,27 @@ textarea {
   padding-bottom: 33px;
 }
 
+.hero.hero_blog .hero__body {
+  text-align: left;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 19px;
+  min-height: 570px;
+}
+
+.hero.hero_blog .hero__body.container-sm {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+.hero.hero_blog .hero__title {
+  margin-bottom: 0;
+}
+
 .hero__bg {
   position: absolute;
   top: 0;
@@ -4295,6 +4316,13 @@ textarea {
   line-height: 120%;
   text-transform: capitalize;
   margin-bottom: 30px;
+}
+
+.hero__date {
+  font-size: 27px;
+  line-height: 150%;
+  margin-bottom: -3px;
+  margin-left: 2px;
 }
 
 .text-intro-block {
@@ -6216,6 +6244,10 @@ textarea {
   transition: all 0.3s ease;
 }
 
+.blog-detail-page .container-sm {
+  max-width: 1296px;
+}
+
 @media (min-width: 768px) {
   .text-content h4 {
     margin-bottom: 28px;
@@ -7832,6 +7864,16 @@ textarea {
     padding-bottom: 43px;
   }
 
+  .hero.hero_blog .hero__body {
+    min-height: 530px;
+    padding-bottom: 27px;
+  }
+
+  .hero.hero_blog .hero__body.container-sm {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+
   .hero__title {
     font-size: 51px;
     line-height: 59px;
@@ -7846,6 +7888,11 @@ textarea {
 
   .hero__subtitle.title-4 {
     margin-bottom: 24px;
+  }
+
+  .hero__date {
+    font-size: 26px;
+    line-height: 150%;
   }
 
   .text-intro-block.text-intro-block_v2 .text-intro-block__img {
@@ -9181,6 +9228,16 @@ textarea {
     padding-bottom: 15px;
   }
 
+  .hero.hero_blog .hero__body {
+    min-height: 570px;
+    padding-bottom: 16px;
+  }
+
+  .hero.hero_blog .hero__body.container-sm {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
   .hero__body .btn-default {
     min-width: 280px;
   }
@@ -9202,6 +9259,11 @@ textarea {
     font-size: 30px;
     line-height: 35px;
     margin-bottom: 29px;
+  }
+
+  .hero__date {
+    font-size: 27px;
+    line-height: 150%;
   }
 
   .text-intro-block.text-intro-block_v2 .text-intro-block__img {
