@@ -486,10 +486,6 @@
             }
         }
 
-        @media (min-width: 1268px) {
-            margin: 0 -26px;
-            padding: 0 26px;
-        }
     }
 
     &__slide-bg {
@@ -589,11 +585,11 @@
     }
 
     &__slide-btn-prev {
-        left: 4px;
+        left: 14px;
     }
 
     &__slide-btn-next {
-        right: 4px;
+        right: 14px;
     }
 
     &__mobile-btn {

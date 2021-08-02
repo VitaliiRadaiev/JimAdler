@@ -20,12 +20,12 @@
         @media (max-width: $md3+px) {
             padding-bottom: 71px;
         }
-        & .text-block__title {
+        & .text-block .text-block__title {
             @media (max-width: $md3+px) {
                 margin-bottom: 28px;
             }
         }
-        & .text-block__text {
+        & .text-block .text-block__text {
             max-width: 750px;
 
             @media (max-width: $md2+px) {

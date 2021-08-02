@@ -1,0 +1,389 @@
+.media-page {
+    & .hero {
+        margin-bottom: 11px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 0;
+        }
+        & .hero__title {
+            margin-bottom: 7px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 11px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 6px;
+            }
+        }
+        & .hero__body {
+            padding-bottom: 32px;
+
+            @media (max-width: $md2+px) {
+                padding-bottom: 29px;
+            }
+        }
+    }
+}
+
+.cta-block {
+    position: relative;
+    //background: linear-gradient(90deg, #8D8077 18.12%, #A79E96 81.88%, rgba(167, 158, 150, 0) 96.61%);
+    background: #a79e96;
+    overflow: hidden;
+
+    & .container-sm {
+        max-width: 1260px;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        @media (max-width: $md3+px) {
+            position: static;
+        }
+
+        & .container-sm {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 0 !important;
+        }
+    }
+
+    &__img-wrap {
+        position: absolute;
+        top: -38px;
+        right: -115px;
+        height: 107%;
+        width: 100%;
+        max-width: 800px;
+
+        @media (max-width: $md2+px) {
+            max-width: 720px;
+            top: -35px;
+            right: -176px;
+        }
+
+        @media (max-width: $md3+px) {
+            position: static;
+            height: 605px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 15%;
+            z-index: 2;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a79e96+0,00000a+100&1+0,0+100 */
+            background: -moz-linear-gradient(left, rgba(167, 158, 150, 1) 0%, rgba(0, 0, 10, 0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(
+                left,
+                rgba(167, 158, 150, 1) 0%,
+                rgba(0, 0, 10, 0) 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+                to right,
+                rgba(167, 158, 150, 1) 0%,
+                rgba(0, 0, 10, 0) 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a79e96', endColorstr='#0000000a',GradientType=1 ); /* IE6-9 */
+
+            @media (max-width: $md3+px) {
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                height: 150px;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00000a+0,a79e96+100&0+0,1+100 */
+                background: -moz-linear-gradient(top, rgba(0, 0, 10, 0) 0%, rgba(167, 158, 150, 1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    top,
+                    rgba(0, 0, 10, 0) 0%,
+                    rgba(167, 158, 150, 1) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 10, 0) 0%,
+                    rgba(167, 158, 150, 1) 100%
+                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000000a', endColorstr='#a79e96',GradientType=0 ); /* IE6-9 */
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 15%;
+                z-index: 2;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00000a+0,a79e96+100&0+0,1+100 */
+                background: -moz-linear-gradient(
+                    left,
+                    rgba(0, 0, 10, 0) 0%,
+                    rgba(167, 158, 150, 1) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    left,
+                    rgba(0, 0, 10, 0) 0%,
+                    rgba(167, 158, 150, 1) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 10, 0) 0%,
+                    rgba(167, 158, 150, 1) 100%
+                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000000a', endColorstr='#a79e96',GradientType=1 ); /* IE6-9 */
+            }
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        color: $textLightColor;
+        min-height: 605px;
+        padding-top: 30px;
+        padding-bottom: 51px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            min-height: 548px;
+            padding: 30px 27px 41px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: auto;
+            padding: 6px 30px 77px !important;
+        }
+    }
+
+    &__text-wrap {
+        @media (min-width: 768px) {
+            max-width: 590px;
+            width: 50%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        max-width: 526px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 11px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 0;
+
+            &.title-3 {
+                font-size: 42px;
+                line-height: 48px;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 310px;
+        margin-bottom: 22px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 24px;
+            max-width: 274px;
+        }
+    }
+
+    & .btn-default {
+        min-width: 362px;
+
+        @media (max-width: $md2+px) {
+            min-width: 294px;
+            min-height: 54px;
+            font-size: 17px;
+            line-height: 22px;
+        }
+    }
+}
+
+.connect {
+    padding: 80px 0 17px;
+
+    @media (max-width: $md2+px) {
+        padding: 37px 0 30px;
+    }
+    @media (max-width: $md3+px) {
+        padding: 35px 0 19px;
+    }
+
+    & .container-sm {
+        max-width: 1300px;
+
+        @media (max-width: $md2+px) {
+            padding: 0 70px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 0 20px !important;
+        }
+    }
+
+    &__title {
+        color: $mainColor2;
+        text-align: center;
+        margin-bottom: 53px;
+
+        &.title-3 {
+            font-size: 51px;
+            line-height: 59px;
+            @media (max-width: $md3+px) {
+                font-size: 42px;
+                line-height: 48px;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 32px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        & > li {
+            padding: 0 15px;
+            flex: 0 1 25%;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0 -21px;
+
+            & > li {
+                padding: 0 21px;
+                flex: 0 1 50%;
+                margin-bottom: 38px;
+            }
+        }
+        @media (max-width: $md3+px) {
+            margin: 0 -5.5px;
+
+            & > li {
+                padding: 0 5.5px;
+                margin-bottom: 25px;
+
+                &:nth-last-child(-n+2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.connect-card {
+    display: block;
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .connect-card__img {
+                box-shadow: 0 0 20px rgba($textColor, 0.4);
+            }
+
+            & .connect-card__title {
+                color: $mainColor2;
+            }
+        }
+    }
+
+    &__img {
+        height: 163px;
+        margin-bottom: 11px;
+        transition: all 0.3s ease;
+        @media (max-width: $md2+px) {
+            height: 195px;
+        }
+        @media (max-width: $md3+px) {
+            height: 98px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__text-wrap {
+        position: relative;
+        padding-right: 37px;
+
+        @media (max-width: $md3+px) {
+            padding-right: 30px;
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 4px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 1px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 31px;
+        color: #000000;
+        transition: all 0.3s ease;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+
+        @media (max-width: $md3+px) {
+            height: 20px;
+            width: 20px;
+            top: 2px;
+            right: 5px;
+        }
+
+        & img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}

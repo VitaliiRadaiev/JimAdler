@@ -1,0 +1,67 @@
+.contact-page {
+    & .hero {
+        margin-bottom: 30px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 3px;
+        }
+        & .hero__title {
+            margin-bottom: 7px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 11px;
+            }
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 6px;
+            }
+        }
+        & .hero__body {
+            padding-bottom: 32px;
+
+            @media (max-width: $md2+px) {
+                padding-bottom: 29px;
+            }
+        }
+    }
+
+    & > .text-block {
+        margin-bottom: 19px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: -8px;
+        }
+
+        & .text-block__title {
+            margin-bottom: 15px;
+
+            @media (max-width: $md2+px) {
+                font-size: 51px;
+                line-height: 59px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 42px;
+                line-height: 48px;
+                padding: 0 6px;
+                margin-bottom: 13px;
+            }
+        }
+
+        & .text-block__text {
+            margin-bottom: 45px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 29px;
+            }
+        }
+
+        & .btn-default {
+            min-width: 331px;
+
+            @media (max-width: $md3+px) {
+                min-width: 280px;
+            }
+        }
+    }
+}

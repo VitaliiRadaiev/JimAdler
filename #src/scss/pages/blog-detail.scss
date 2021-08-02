@@ -1,10 +1,111 @@
 .blog-detail-page {
     & .container-sm {
         max-width: 1296px;
-        // padding: 0 48px;
+    }
 
-        // @media (max-width: $md3+px) {
-        //     padding: 0 20px;
-        // }
+    & .hero {
+        margin-bottom: 81px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 29px;
+        }
+    }
+}
+
+.blog-detail {
+    margin-bottom: 80px;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 59px;
+    }
+    @media (max-width: $md3+px) {
+        margin-bottom: 56px;
+    }
+    &.container-sm {
+        max-width: 1309px;
+
+        @media (max-width: $md2+px) {
+            padding: 0 48px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 0 20px !important;
+        }
+    }
+    &.text-content {
+        & h4 {
+            font-family: $titleFontFamily;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 120%;
+            text-transform: capitalize;
+            color: #000000;
+            margin-bottom: 22px;
+
+            @media (max-width: $md3+px) {
+                font-size: 30px;
+                line-height: 35px;
+                margin-bottom: 16px;
+            }
+        }
+
+        & .col-2 {
+            @media (min-width: 992px) {
+                & > p {
+                    max-width: 567px;
+                }
+            }
+
+            & ~ h4 {
+                margin-top: 60px;
+
+                @media (max-width: $md3+px) {
+                    margin-top: 35px;
+                }
+            }
+        }
+
+        & p {
+            margin-bottom: 1.3em;
+            & ~ h4 {
+                margin-top: 60px;
+
+                @media (max-width: $md3+px) {
+                    margin-top: 35px;
+                }
+            }
+        }
+
+        & ul {
+            @media (max-width: $md3+px) {
+                margin-bottom: 1.3em;
+            }
+            & li {
+                padding-left: 38px;
+
+                @media (max-width: $md3+px) {
+                    padding-left: 25px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2px;
+                    }
+                }
+
+                &:before {
+                    left: 14px;
+                    top: 10px;
+
+                    @media (max-width: $md3+px) {
+                        height: 8px;
+                        width: 8px;
+                        top: 8px;
+                        left: 1px;
+                    }
+                }
+            }
+        }
     }
 }

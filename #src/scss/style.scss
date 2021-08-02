@@ -405,8 +405,9 @@ button.btn-default {
 			}
 		}
 
-		& img {
+		& img, & svg {
 			width: 17px;
+			height: auto;
 		}
 	}
 }
@@ -728,6 +729,31 @@ button.btn-default {
 				}
 			}
 		}
+
+		&.col-2 {
+			display: flex;
+			column-count: auto;
+			column-gap: normal;
+			flex-wrap: wrap;
+			max-width: 992px;
+
+			@media (max-width: $md3+px) {
+				display: block;
+			}
+
+			& > li {
+				flex: 0 0 388px;
+				
+				@media (min-width: 768px) {
+					padding-right: 20px;
+
+				}
+
+				@media (max-width: $md2+px) {
+					flex: 0 0 275px;
+				}
+			}
+		}
 	}
 
 	& ol {
@@ -759,6 +785,7 @@ button.btn-default {
 	}
 
 	& .col-2 {
+
 		@media (min-width: 992px) {
 			text-align: left;
 			column-count: 2;
@@ -769,6 +796,7 @@ button.btn-default {
 			text-align: left;
 		}
 	}
+
 }
 // === and TEXT CONTETN BLOCK ========================================================================
 
@@ -788,6 +816,7 @@ button.btn-default {
 @import "../common/info-block/info-block";
 @import "../common/questions-block/questions-block";
 @import "../common/related-pages/related-pages";
+@import "../common/preview-block/preview-block";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -805,5 +834,7 @@ button.btn-default {
 @import "pages/faq";
 @import "pages/blog";
 @import "pages/blog-detail";
+@import "pages/contact";
+@import "pages/media";
 
 // ==== AND PAGES =====================================================

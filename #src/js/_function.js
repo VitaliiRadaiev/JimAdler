@@ -209,3 +209,8 @@ function changeImgOnHoverItem(img, items) {
 		})
 	})
 }
+
+function cropText(el, count) {
+	let text = [...el.innerText].slice(0, count).join('') + '...';
+	el.innerText = text;
+}

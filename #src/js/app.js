@@ -37,6 +37,7 @@ window.addEventListener('load', function () {
 	@@include('../common/testimonial-text/testimonial-text.js');
 	@@include('../common/rating/rating.js');
 	@@include('../common/footer/footer.js');
+	@@include('../common/preview-block/preview-block.js');
 	
 	@@include('pages/home.js');
 	@@include('pages/practice-detail.js');
