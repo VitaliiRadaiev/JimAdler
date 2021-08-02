@@ -242,7 +242,7 @@
                 content: "";
                 top: 0;
                 left: 0;
-                height: 100%;
+                height: calc(100% + 25px);
                 width: 116px;
                 background: linear-gradient(90deg, #ffffff 3.03%, rgba(255, 255, 255, 0) 96.1%);
                 z-index: 2;
@@ -252,7 +252,7 @@
                 content: "";
                 top: 0;
                 right: 0;
-                height: 100%;
+                height: calc(100% + 25px);
                 width: 116px;
                 background: linear-gradient(270deg, #ffffff 3.03%, rgba(255, 255, 255, 0) 96.1%);
                 z-index: 2;
@@ -261,7 +261,7 @@
 
             & .slider-btn {
                 position: absolute;
-                top: 50%;
+                top: calc(50% + 25px);
                 transform: translateY(-50%);
                 pointer-events: auto;
                 padding: 8px;

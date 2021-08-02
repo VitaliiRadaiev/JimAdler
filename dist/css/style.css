@@ -6835,7 +6835,7 @@ textarea {
     content: "";
     top: 0;
     left: 0;
-    height: 100%;
+    height: calc(100% + 25px);
     width: 116px;
     background: -webkit-gradient(linear, left top, right top, color-stop(3.03%, #ffffff), color-stop(96.1%, rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(left, #ffffff 3.03%, rgba(255, 255, 255, 0) 96.1%);
@@ -6848,7 +6848,7 @@ textarea {
     content: "";
     top: 0;
     right: 0;
-    height: 100%;
+    height: calc(100% + 25px);
     width: 116px;
     background: -webkit-gradient(linear, right top, left top, color-stop(3.03%, #ffffff), color-stop(96.1%, rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(right, #ffffff 3.03%, rgba(255, 255, 255, 0) 96.1%);
@@ -6859,7 +6859,7 @@ textarea {
 
   .preview-block__slider-control .slider-btn {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 25px);
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
