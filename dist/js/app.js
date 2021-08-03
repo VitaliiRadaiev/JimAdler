@@ -1523,6 +1523,7 @@ function setrating(th, val) {
     if( bg && items.length) {
         changeImgOnHoverItem(bg, items);
     };
+
 });
 
 window.addEventListener('DOMContentLoaded', function() {

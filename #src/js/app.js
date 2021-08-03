@@ -41,6 +41,7 @@ window.addEventListener('load', function () {
 	
 	@@include('pages/home.js');
 	@@include('pages/practice-detail.js');
+
 });
 
 window.addEventListener('DOMContentLoaded', function() {
