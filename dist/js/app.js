@@ -1349,8 +1349,6 @@ function setrating(th, val) {
                     let container = slider;
                     let mainSliderChilds = [...slider.querySelector('.swiper-container .swiper-wrapper').children]
                         .filter(i => !i.classList.contains('swiper-slide-duplicate'));
-
-                    console.log(mainSliderChilds);
                     let hulfChilds = mainSliderChilds.slice(Math.floor(mainSliderChilds.length / 2));
                     
                     let slider2 = document.createElement('div');
