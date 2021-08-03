@@ -31,7 +31,7 @@
                             spaceBetween: 11,
                             autoHeight: true,
                             centeredSlides: false,
-                            loop: false,
+                           // loop: false,
                         },
                         768: {
                             slidesPerView: 'auto',
@@ -46,8 +46,12 @@
                 }
         
                 function createSlider() {
+                   
                     let container = slider;
-                    let mainSliderChilds = [...slider.querySelector('.swiper-container .swiper-wrapper').children];
+                    let mainSliderChilds = [...slider.querySelector('.swiper-container .swiper-wrapper').children]
+                        .filter(i => !i.classList.contains('swiper-slide-duplicate'));
+
+                    console.log(mainSliderChilds);
                     let hulfChilds = mainSliderChilds.slice(Math.floor(mainSliderChilds.length / 2));
                     
                     let slider2 = document.createElement('div');
@@ -76,7 +80,7 @@
                                 spaceBetween: 11,
                                 autoHeight: true,
                                 centeredSlides: false,
-                                loop: false,
+                                //loop: false,
                             },
                             768: {
                                 slidesPerView: 'auto',
