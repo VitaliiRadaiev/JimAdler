@@ -242,6 +242,23 @@
         margin-bottom: 38px;
     }
 
+    &__subtitle {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 38px;
+
+        @media (max-width: $md2+px) {
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+
     & .line-decor {
         margin-bottom: 40px;
 
@@ -258,6 +275,12 @@
         color: $textColor;
         margin: 0 auto 40px;
         max-width: 995px;
+
+        &.text-content {
+            & p {
+                margin-bottom: 1.42em;
+            }
+        }
 
         @media (max-width: $md2+px) {
             margin-bottom: 70px;

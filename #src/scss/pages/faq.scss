@@ -190,6 +190,14 @@
             margin-top: -7px;
             padding-bottom: 13px;
         }
+
+        & > p {
+            margin-bottom: 1.42em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

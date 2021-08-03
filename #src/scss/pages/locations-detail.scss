@@ -34,6 +34,43 @@
         }
     }
 
+    & .testimonial-text_v2 {
+        & + .text-block {
+            padding-top: 79px;
+            margin-bottom: 0;
+            padding-bottom: 36px;
+
+            & .text-block__title {
+                margin-bottom: 22px;
+            }
+    
+            & .text-block__text  {
+                &.text-content {
+                    & p {
+                        margin-bottom: 1.45em;
+                    }
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                padding: 39px 0 11px;
+
+                & .text-block__title  {
+                    margin-bottom: 20px;
+                }
+
+                & .text-block__text {
+                    &.text-content {
+
+                    }
+                } 
+                    
+            }
+        }
+
+
+    }
+
     & .main-form {
         @media (max-width: $md3+px) {
             padding-bottom: 71px;

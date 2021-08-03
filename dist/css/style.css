@@ -3990,6 +3990,12 @@ textarea {
   margin-bottom: 38px;
 }
 
+.text-block__subtitle {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 38px;
+}
+
 .text-block .line-decor {
   margin-bottom: 40px;
 }
@@ -3998,6 +4004,10 @@ textarea {
   color: #48494B;
   margin: 0 auto 40px;
   max-width: 995px;
+}
+
+.text-block__text.text-content p {
+  margin-bottom: 1.42em;
 }
 
 .text-block__bottom {
@@ -6161,6 +6171,20 @@ textarea {
   padding-top: 17px;
 }
 
+.locations-datail-page .testimonial-text_v2 + .text-block {
+  padding-top: 79px;
+  margin-bottom: 0;
+  padding-bottom: 36px;
+}
+
+.locations-datail-page .testimonial-text_v2 + .text-block .text-block__title {
+  margin-bottom: 22px;
+}
+
+.locations-datail-page .testimonial-text_v2 + .text-block .text-block__text.text-content p {
+  margin-bottom: 1.45em;
+}
+
 .locations-datail-page .main-form .text-block__text {
   max-width: 750px;
 }
@@ -6266,6 +6290,14 @@ textarea {
   font-size: 20px;
   line-height: 30px;
   text-transform: capitalize;
+}
+
+.faq__list-text > p {
+  margin-bottom: 1.42em;
+}
+
+.faq__list-text > p:last-child {
+  margin-bottom: 0;
 }
 
 .plus {
@@ -6671,6 +6703,32 @@ textarea {
 .connect-card__icon img {
   height: 100%;
   width: auto;
+}
+
+.media-detail-page .hero {
+  margin-bottom: 30px;
+}
+
+.media-detail-page > .text-block .text-block__title {
+  max-width: 918px;
+  margin: 0 auto 21px;
+  font-size: 51px;
+  line-height: 59px;
+}
+
+.covid-page .hero {
+  margin-bottom: 30px;
+}
+
+.covid-page > .text-block .text-block__title {
+  max-width: 918px;
+  margin: 0 auto 21px;
+  font-size: 51px;
+  line-height: 59px;
+}
+
+.covid-page > .video-block {
+  margin-bottom: 60px;
 }
 
 @media (min-width: 768px) {
@@ -8265,6 +8323,12 @@ textarea {
     margin-top: 104px;
   }
 
+  .text-block__subtitle {
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 35px;
+  }
+
   .text-block .line-decor {
     margin-bottom: 26px;
   }
@@ -9370,6 +9434,50 @@ textarea {
   .connect-card__img {
     height: 195px;
   }
+
+  .media-detail-page .hero {
+    margin-bottom: 16px;
+  }
+
+  .media-detail-page > .text-block .text-block__title {
+    margin-bottom: 35px;
+  }
+
+  .media-detail-page > .text-block {
+    padding-bottom: 0;
+  }
+
+  .media-detail-page > .text-block .text-block__text {
+    margin-bottom: 52px;
+  }
+
+  .media-detail-page > .video-block .video-block__poster {
+    height: 464px;
+  }
+
+  .covid-page .hero {
+    margin-bottom: 16px;
+  }
+
+  .covid-page > .text-block .text-block__title {
+    margin-bottom: 35px;
+  }
+
+  .covid-page > .text-block {
+    padding-bottom: 0;
+  }
+
+  .covid-page > .text-block .text-block__text {
+    margin-bottom: 52px;
+  }
+
+  .covid-page > .video-block {
+    margin-bottom: 50px;
+  }
+
+  .covid-page > .video-block .video-block__poster {
+    height: 464px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -9806,6 +9914,11 @@ textarea {
     margin-top: 50px;
   }
 
+  .text-block__subtitle {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
   .text-block .line-decor {
     margin-bottom: 32px;
   }
@@ -9986,6 +10099,10 @@ textarea {
   .text-intro-block.text-intro-block_v2 .text-intro-block__body h2 {
     font-size: 42px;
     line-height: 48px;
+  }
+
+  .text-intro-block.text-intro-block_v2 .text-intro-block__body p {
+    padding-right: 7px;
   }
 
   .text-intro-block__body h4 {
@@ -10969,6 +11086,14 @@ textarea {
     display: block;
   }
 
+  .locations-datail-page .testimonial-text_v2 + .text-block {
+    padding: 39px 0 11px;
+  }
+
+  .locations-datail-page .testimonial-text_v2 + .text-block .text-block__title {
+    margin-bottom: 20px;
+  }
+
   .locations-datail-page .main-form {
     padding-bottom: 71px;
   }
@@ -11279,6 +11404,42 @@ textarea {
     width: 20px;
     top: 2px;
     right: 5px;
+  }
+
+  .media-detail-page .hero {
+    margin-bottom: 0;
+  }
+
+  .media-detail-page > .text-block .text-block__title {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .media-detail-page > .video-block {
+    margin-bottom: 36px;
+  }
+
+  .media-detail-page > .video-block .video-block__poster {
+    height: 302px;
+  }
+
+  .covid-page .hero {
+    margin-bottom: 0;
+  }
+
+  .covid-page > .text-block .text-block__title {
+    font-size: 42px;
+    line-height: 48px;
+    margin: 0 -4px 16px;
+  }
+
+  .covid-page > .video-block {
+    margin-bottom: 30px;
+  }
+
+  .covid-page > .video-block .video-block__poster {
+    height: 302px;
   }
 }
 

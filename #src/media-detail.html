@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{})
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page media-detail-page _padding-top">
+        <section class="hero">
+            <div class="hero__bg ibg">
+                <picture>
+                    <source srcset="img/photo/hero-bg-13-mob.png" media="(max-width: 767.98px)">
+                    <source srcset="img/photo/hero-bg-13-tablet.png" media="(max-width: 991.98px)">
+                    <img src="img/photo/hero-bg-13.png" alt="img">
+                </picture>
+            </div>
+            <div class="hero__body container-md">
+                <h3 class="hero__title title-3">Media</h3>
+                <div class="hero__subtitle">
+                    That's the adler advantage
+                </div>
+            </div>
+        </section>
+
+        <section class="text-block">
+			<div class="container-md">
+				<h3 class="text-block__title title-3">
+					Jim Adler TV Spots Broadcast on Last Week Tonight with John Oliver
+				</h3>
+                <div class="text-block__subtitle">           
+                    By Jim Adler, May 24, 2019
+                </div>
+				<div class="text-block__text text-content">
+                    <hr>
+                    <p>
+                        A popular late-night show on HBO, Last Week Tonight with John Oliver, featured a video collage of The Texas Hammer’s famous spots in both English and Spanish. The cable show features satirical recaps of a variety of both World and U.S. news headlines and airs on a weekly basis.
+                    </p>
+                    <p>
+                        The May 5th show paired its news discussion with a short comedic segment titled, “And Now This” where producers merged together a variety of Jim Adler’s most popular TV spots and cut them into the show. See the English and Spanish video collages here.
+                    </p>
+                </div>
+			</div>
+		</section>
+
+        <div class="video-block">
+            <div class="video-block__poster ibg">
+                <img src="img/photo/video-block-img-3.png" alt="">
+            </div>
+            <a data-fancybox href="img/DESKTOP VIDEO.mp4" class="video-block__play">
+                <span class="play-icon">
+                    <img class="img-svg" src="img/icons/play.svg" alt="">
+                </span>
+            </a>
+            <!-- <a data-fancybox  href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video-block__play">
+                        <span class="play-icon">
+                            <img class="img-svg" src="img/icons/play.svg" alt="">
+                        </span>
+                    </a>
+                    <a data-fancybox  href="https://vimeo.com/191947042" class="video-block__play">
+                        <span class="play-icon">
+                            <img class="img-svg" src="img/icons/play.svg" alt="">
+                        </span>
+                    </a> -->
+        </div>
+
+        <section class="main-form main-form_v2">
+            <div class="container-sm">
+                <div class="text-block">
+                    <h2 class="text-block__title title-2">
+                        Free Case Review
+                    </h2>
+                    <div class="line-decor">
+                        <img src="img/icons/line.svg" alt="">
+                    </div>
+                    <div class="text-block__text text-content">
+                        We only get paid if we win your case, so you know we will do our best to fight for you.
+                    </div>
+                </div>
+                <div class="main-form__group">
+                    <div class="main-form__item">
+                        <input class="input" type="text" placeholder="Full name">
+                    </div>
+                    <div class="main-form__item">
+                        <input class="input" type="text" placeholder="Phone">
+                    </div>
+                    <div class="main-form__item">
+                        <input class="input" type="text" placeholder="Email">
+                    </div>
+                    <div class="main-form__item main-form__item-full-width">
+                        <textarea class="textarea" placeholder="Tell us about your case…"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-default">
+                    Send Message
+                </button>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('common/popup/_popup.html',{})
+
+    @@include('_js.html',{})
+</body>
+
+</html>

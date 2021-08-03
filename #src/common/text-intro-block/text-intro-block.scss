@@ -73,6 +73,10 @@
 
             & p {
                 padding-right: 27px;
+
+                @media (max-width: $md3+px) {
+                    padding-right: 7px;
+                }
             }
         }
 
