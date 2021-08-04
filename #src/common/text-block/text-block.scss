@@ -116,7 +116,7 @@
         margin-bottom: 1px;
 
         @media (max-width: $md2+px) {
-            text-align: left;
+           // text-align: left;
             padding-top: 50px;
         }
 
@@ -235,6 +235,14 @@
                 }
             }
         }
+
+        & .text-block__text {
+            max-width: 1300px;
+        }
+    }
+
+    & + .text-block {
+        padding-top: 0;
     }
 
     &__title {
