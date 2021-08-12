@@ -112,6 +112,12 @@ body {
 			}
 		}
 	}
+
+	&.admin-bar  {
+		& .header {
+			top: 32px;
+		}
+	}
 }
 
 ._preload-body {
@@ -255,6 +261,8 @@ textarea {
 		object-fit: cover;
 	}
 }
+
+
 
 // === title ========================================================================
 .title-1 {
@@ -817,6 +825,7 @@ button.btn-default {
 @import "../common/questions-block/questions-block";
 @import "../common/related-pages/related-pages";
 @import "../common/preview-block/preview-block";
+@import "../common/tabs/tabs";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

@@ -222,6 +222,8 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
     }
 }
 
+createTabs('.tabs', '.tabs-trigger', '.tabs-content');
+
 function changeImgOnHoverItem(img, items) {
 	if(!img) return new Error('img is undefined');
 	if(!items) return new Error('item is undefined');
