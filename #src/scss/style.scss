@@ -454,6 +454,10 @@ button.btn-default {
 		width: auto;
 		height: auto;
 		pointer-events: none;
+
+		@media (max-width: $md3+px) {
+			margin-left: 9px;
+		}
 	}
 }
 
@@ -651,7 +655,7 @@ button.btn-default {
 		}
 	}
 
-	& q {
+	& q, & blockquote {
 		display: block;
 		padding-left: 16px;
 		position: relative;
@@ -850,3 +854,12 @@ button.btn-default {
 @import "pages/blog-us";
 
 // ==== AND PAGES =====================================================
+
+
+.fancybox-slide--iframe .fancybox-content {
+    width  : 800px;
+    height : 600px !important;
+    max-width  : 95%;
+    max-height : 80%;
+    margin: 0;
+}

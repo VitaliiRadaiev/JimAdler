@@ -9,6 +9,7 @@
 }
 .promo-header {
     position: relative;
+    height: 100%;
 
     &__bg {
         position: absolute;
@@ -17,6 +18,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        overflow: hidden;
 
         &:before {
             position: absolute;
@@ -50,6 +52,17 @@
             height: 100%;
             object-fit: cover;
         }
+
+        & iframe {
+            width: 100vw;
+            height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+            min-height: 100vh;
+            min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__body {
@@ -61,9 +74,9 @@
         align-items: center;
         padding-top: 60px;
         padding-bottom: 54px;
-
+        color: $textLightColor;
         @media (max-width: $md3+px) {
-            min-height: 662px;
+            min-height: calc(100vh - 127px);
             padding-bottom: 38px;
         }
 
@@ -171,9 +184,69 @@
         height: 100%;
         z-index: -1;
         background: linear-gradient(89.99deg, #000000 35.96%, rgba(10, 28, 51, 0.2) 89.84%);
+        display: flex;
+        flex-direction: column;
 
         @media (max-width: $md2+px) {
             background: #000;
+        }
+
+        & .container-lg {
+            flex: 1 1 auto;
+            position: relative;
+            z-index: 3;
+
+            @media (min-width: 1920px) {
+                max-width: 1330px;
+            }
+
+            @media (max-width: $md3+px) {
+                display: none;
+            }
+        }
+
+    }
+
+    &__bg-line {
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(#fff, .2);
+
+        &.line-1 {
+            left: 33.333%;
+
+            @media (min-width: 992px) {
+                left: calc(33.333% + 16px); 
+            }
+        }
+
+        &.line-2 {
+            left: 66.6666%;
+
+            @media (min-width: 992px) {
+                left: calc(66.6666% - 16px);
+            }
+        }
+
+        &.line-3 {
+            display: none;
+        }
+
+        @media (min-width: 1920px) {
+            &.line-1 {
+                left: 25%;
+            }
+    
+            &.line-2 {
+                left: 50%;
+            }
+    
+            &.line-3 {
+                display: block;
+                left: 75%;
+            }
         }
     }
 
@@ -514,14 +587,14 @@
     }
 
     &__slide-icon {
-        height: 95px;
+        height: 108px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 63px;
 
         @media (max-width: $md3+px) {
-            height: 73px;
+            height: 74px;
             margin-bottom: 23px;
         }
 

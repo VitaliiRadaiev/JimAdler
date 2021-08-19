@@ -3,8 +3,21 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
+// var tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api", "https://player.vimeo.com/api/player.js"];
+youtubeVimeoUrls.forEach(url => {
+	let tag = document.createElement('script');
+	tag.src = url;
+	let firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+})
+
 window.addEventListener('load', function () {
-	
+
 	document.body.classList.add('is-load');
 
 	// ==== ADD PADDING-TOP ================================
@@ -12,15 +25,15 @@ window.addEventListener('load', function () {
 		let wrapper = document.querySelector('._padding-top');
 		if (wrapper) {
 			let header = document.querySelector('.header');
-			if(header) {
+			if (header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
 				setTimeout(() => {
 					setPedding();
-				},100)
-				
+				}, 100)
+
 				window.addEventListener('resize', setPedding);
 			}
-			
+
 		}
 	}
 	// ==== AND ADD PADDING-TOP ================================
@@ -38,14 +51,24 @@ window.addEventListener('load', function () {
 	@@include('../common/rating/rating.js');
 	@@include('../common/footer/footer.js');
 	@@include('../common/preview-block/preview-block.js');
-	
+	@@include('../common/video/video.js');
+
 	@@include('pages/home.js');
 	@@include('pages/practice-detail.js');
 
+	let blogList = document.querySelector('.blog-list__body');
+	if (blogList) {
+		let div = document.createElement('div');
+		div.className = 'blog-list__item';
+		div.style.height = '95px';
+
+		blogList.prepend(div);
+	}
+
 });
 
-window.addEventListener('DOMContentLoaded', function() {
-	if(isMobile.any()) {
+window.addEventListener('DOMContentLoaded', function () {
+	if (isMobile.any()) {
 		document.body.classList.add('_is-mobile');
 	}
 
@@ -68,24 +91,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 
-	function setMobileVideoForBanner() {
-		let video = document.querySelector('.promo-header__bg video');
-		if(video) {
-			let url = video.dataset.mediaMobile;
-			Array.from(video.children).forEach(item => {
-				item.setAttribute('src', url);
-			})
-
-			video.load();
-		}
-	}
-
-	if(document.documentElement.clientWidth < 767.98) {
-		setMobileVideoForBanner()
-	}
 });
 
 
 
-//@@include('plagins/lazy-load.js');
 

@@ -31,7 +31,7 @@
                 <a href="#popupSerch" class="header__search popup-link">
                     <img src="img/icons/search.svg" alt="">
                 </a>
-                <ul class="header__top-menu" data-da="menu,1,991.98">
+                <ul class="header__top-menu" data-da="menu__wrap,1,991.98">
                     <li>
                         <a href="#" class="header__top-menu-link current-menu-item">
                             Locations   
@@ -66,66 +66,68 @@
             </div>
             <div class="header__row-2">
                 <nav class="header__menu menu">
-                    <ul class="menu__list">
-                        <li class="menu-item-has-children">
-                            <a href="#" class="menu__link current-menu-item">
-                                About Us    
-                            </a>
-                            <div class="sub-menu">
-                                <ul class="sub-menu__list">
-                                    <li>
-                                        <a href="#" class="sub-menu__link">
-                                            About Our law Firm
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="sub-menu__link">
-                                            Review and testimonials
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="sub-menu__link">
-                                            Case Results & Settlements
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="sub-menu__link">
-                                            Review and testimonials
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="sub-menu__link">
-                                            Case Results & Settlements
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">
-                                Practice areas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">
-                                Attorneys
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">
-                                Media
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu__link">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="btn-default">
-                        Free Case review
-                    </a>
+                    <div class="menu__wrap">
+                        <ul class="menu__list">
+                            <li class="menu-item-has-children">
+                                <a href="#" class="menu__link current-menu-item">
+                                    About Us    
+                                </a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu__list">
+                                        <li>
+                                            <a href="#" class="sub-menu__link">
+                                                About Our law Firm
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub-menu__link">
+                                                Review and testimonials
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub-menu__link">
+                                                Case Results & Settlements
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub-menu__link">
+                                                Review and testimonials
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub-menu__link">
+                                                Case Results & Settlements
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link">
+                                    Practice areas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link">
+                                    Attorneys
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link">
+                                    Media
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+    
+                        <a href="#" class="btn-default">
+                            Free Case review
+                        </a>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -143,7 +145,23 @@
 
 
     <main class="_page practice-detail-page _padding-top">
-        <section class="hero">
+        <section class="promo-header">
+			<!-- <div class="promo-header__bg ibg"> -->
+				<!-- <img src="img/photo/promo-bg.jpg" alt=""> -->
+				<!-- <video poster="img/photo/promo-bg.jpg" data-media-mobile="img/MOBILE VIDEO.mp4" autoplay muted loop
+					playsinline controlslist="nodownload" crossorigin="anonymous">
+					<source src="img/DESKTOP VIDEO.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</video> -->
+			<!-- </div>  -->
+            <!-- <div class="promo-header__bg ibg" data-cs-vimeo-id="554638450" data-cs-vimeo-mobile-id="286898202"></div> -->
+ 
+            <div class="promo-header__bg ibg" data-youtube-id="7wtfhZwyrcc" data-youtube-mobile-id="Y2NkuFIlLEo"></div>
+
+			<div class="promo-header__body container">
+				<h3 class="hero__title title-3">Car Accidents</h3>
+			</div>
+		</section>
+        <!-- <section class="hero">
             <div class="hero__bg ibg">
                 <picture>
                     <source srcset="img/photo/hero-bg-4-mob.png" media="(max-width: 767.98px)">
@@ -155,7 +173,7 @@
                 <h3 class="hero__title title-3">Car Accidents</h3>
                 <div class="hero__subtitle">When you've been hurt in a car wreck, we're here to help you.</div>
             </div>
-        </section>
+        </section> -->
 
         <section class="text-block">
             <div class="container-md">
@@ -949,6 +967,7 @@
 
 
     
+<!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
 <!-- <script
