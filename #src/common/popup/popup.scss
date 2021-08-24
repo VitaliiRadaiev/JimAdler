@@ -67,21 +67,24 @@
 
 	&__input {
 		height: 6rem;
-		padding: 1rem 2.7rem;
+		padding: 1rem 2.7rem 1rem;
 		width: 100%;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+			line-height: 1.2em;
 		&::placeholder {
 			color:$mainColor;
-			font-size: 1.4rem;
-			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.2em;
+			//font-weight: 500;
 			letter-spacing: 0.12rem;
-			text-transform: uppercase;
+			text-transform: uppercase; 
 		}
 
 		&:focus {
 			color: $mainColor;
-			//font-size: 1.35rem;
-			letter-spacing: 0.08rem;
-			font-weight: 500;
+			letter-spacing: 0.12rem;
 		}
 
 /*		@media (max-width: $md3+px) {
@@ -118,6 +121,7 @@
 		position: relative;
 		background: #fff;
 		transition: all .2s ease;
+		line-height: 1.2em;
 
 		&:active {
 			background: rgba($mainColor, 0.2);

@@ -653,6 +653,11 @@ button.btn-default {
 				margin-top: 37px;
 			}
 		}
+
+		& a {
+			color: $mainColor;
+			text-decoration: underline;
+		}
 	}
 
 	& q, & blockquote {

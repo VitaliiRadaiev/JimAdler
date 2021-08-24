@@ -35,10 +35,9 @@
         }
 
         & .result-v2__list {
-            margin-bottom: 100px;
 
             @media (max-width: $md2+px) {
-                margin-bottom: 5px;
+   
                 transform: translateX(-3px);
             }
         }

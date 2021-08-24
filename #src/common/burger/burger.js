@@ -9,8 +9,6 @@ let _slideDown2 = (target, duration = 500) => {
 
 	target.style.display = display;
 	let height = (document.documentElement.clientHeight - header.clientHeight); //target.offsetHeight;
-
-	console.log(height);
 	target.style.overflow = 'hidden';
 	target.style.height = 0;
 	target.style.paddingTop = 0;

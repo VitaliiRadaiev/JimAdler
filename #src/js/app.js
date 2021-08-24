@@ -3,17 +3,12 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
-// var tag = document.createElement('script');
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api", "https://player.vimeo.com/api/player.js"];
+let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api"];
 youtubeVimeoUrls.forEach(url => {
 	let tag = document.createElement('script');
 	tag.src = url;
-	let firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	document.body.prepend(tag);
 })
 
 window.addEventListener('load', function () {
@@ -55,16 +50,6 @@ window.addEventListener('load', function () {
 
 	@@include('pages/home.js');
 	@@include('pages/practice-detail.js');
-
-	let blogList = document.querySelector('.blog-list__body');
-	if (blogList) {
-		let div = document.createElement('div');
-		div.className = 'blog-list__item';
-		div.style.height = '95px';
-
-		blogList.prepend(div);
-	}
-
 });
 
 window.addEventListener('DOMContentLoaded', function () {

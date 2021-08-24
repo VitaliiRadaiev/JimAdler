@@ -348,6 +348,10 @@
                 margin-right: 4px;
             }
         }
+
+        @media (min-width: 992px) {
+            padding-bottom: 0 !important;
+        }
     }
 
     @media (min-width: 992px) {

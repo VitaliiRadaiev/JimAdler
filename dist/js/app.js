@@ -3,17 +3,12 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
-// var tag = document.createElement('script');
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api", "https://player.vimeo.com/api/player.js"];
+let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api"];
 youtubeVimeoUrls.forEach(url => {
 	let tag = document.createElement('script');
 	tag.src = url;
-	let firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	document.body.prepend(tag);
 })
 
 window.addEventListener('load', function () {
@@ -178,8 +173,23 @@ spollerInit()
 
 if($('.anchor').length>0) {
 	$(".anchor").click(function() {
-	  var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
-	  var destination = $(elementClick).offset().top - 70;
+		let elementClick;
+		let destination;
+		if($(this).attr("href") && $(this).attr("href").match(/#\w+$/gi)) {
+			elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
+			if(document.getElementById(elementClick)) {
+				destination = $(elementClick).offset().top - 70;
+			} else {
+				destination = $(this).closest('.promo-header').height();
+			}
+		} else {
+			if($(this).closest('.promo-header')) {
+				destination = $(this).closest('.promo-header').height();
+			}
+		}
+	  if($(this).hasClass('btn-default')) {
+		destination = $(elementClick).offset().top - 120;
+	  }
 	  jQuery("html:not(:animated),body:not(:animated)").animate({
 		scrollTop: destination
 	  }, 600);
@@ -904,8 +914,6 @@ let _slideDown2 = (target, duration = 500) => {
 
 	target.style.display = display;
 	let height = (document.documentElement.clientHeight - header.clientHeight); //target.offsetHeight;
-
-	console.log(height);
 	target.style.overflow = 'hidden';
 	target.style.height = 0;
 	target.style.paddingTop = 0;
@@ -1156,6 +1164,10 @@ document.addEventListener('keydown', function(e) {
                 })
 
             })
+        }
+
+        if(isSafari) {
+            menu.querySelector('.menu__wrap').style.paddingBottom = '90px';
         }
     }
 };
@@ -1482,17 +1494,10 @@ function setrating(th, val) {
 					id = video.dataset.csVimeoMobileId;
 				}
 			}
-			let player = new Vimeo.Player(video, {
-				id,
-				autoplay: true,
-				controls: false,
-				muted: true,
-				loop: true,
-				width: '100%',
-				height: '100%',
-			})
+			video.innerHTML = `  <iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" ></iframe>`
 		})
 	}
+	
 
 	let youtubeVideos = document.querySelectorAll('[data-youtube-id]');
 	if (youtubeVideos.length) {
@@ -1545,6 +1550,24 @@ function setrating(th, val) {
 
 	if(document.documentElement.clientWidth < 767.98) {
 		setMobileVideoForBanner()
+	}
+
+	let fancyboxYoutubeLinks = document.querySelectorAll('[data-fancybox-youtube]');
+	if(fancyboxYoutubeLinks.length) {
+		fancyboxYoutubeLinks.forEach(link => {
+			let id = link.getAttribute('href');
+			if(/https:\/\/www\.youtube\.com/i.test(id)) return;
+			link.setAttribute('href', `https://www.youtube.com/watch?v=${id}`)
+		})
+	}
+
+	let fancyboxVimeoLinks = document.querySelectorAll('[data-fancybox-vimeo]');
+	if(fancyboxVimeoLinks.length) {
+		fancyboxVimeoLinks.forEach(link => {
+			let id = link.getAttribute('href');
+			if(/https:\/\/vimeo\.com\//i.test(id)) return;
+			link.setAttribute('href', `https://vimeo.com/${id}`)
+		})
 	}
 };
 
@@ -1635,16 +1658,6 @@ function setrating(th, val) {
     if( bg && items.length) {
         changeImgOnHoverItem(bg, items);
     };
-
-	let blogList = document.querySelector('.blog-list__body');
-	if (blogList) {
-		let div = document.createElement('div');
-		div.className = 'blog-list__item';
-		div.style.height = '95px';
-
-		blogList.prepend(div);
-	}
-
 });
 
 window.addEventListener('DOMContentLoaded', function () {

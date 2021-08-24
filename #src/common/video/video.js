@@ -9,17 +9,10 @@
 					id = video.dataset.csVimeoMobileId;
 				}
 			}
-			let player = new Vimeo.Player(video, {
-				id,
-				autoplay: true,
-				controls: false,
-				muted: true,
-				loop: true,
-				width: '100%',
-				height: '100%',
-			})
+			video.innerHTML = `  <iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" ></iframe>`
 		})
 	}
+	
 
 	let youtubeVideos = document.querySelectorAll('[data-youtube-id]');
 	if (youtubeVideos.length) {
@@ -72,5 +65,23 @@
 
 	if(document.documentElement.clientWidth < 767.98) {
 		setMobileVideoForBanner()
+	}
+
+	let fancyboxYoutubeLinks = document.querySelectorAll('[data-fancybox-youtube]');
+	if(fancyboxYoutubeLinks.length) {
+		fancyboxYoutubeLinks.forEach(link => {
+			let id = link.getAttribute('href');
+			if(/https:\/\/www\.youtube\.com/i.test(id)) return;
+			link.setAttribute('href', `https://www.youtube.com/watch?v=${id}`)
+		})
+	}
+
+	let fancyboxVimeoLinks = document.querySelectorAll('[data-fancybox-vimeo]');
+	if(fancyboxVimeoLinks.length) {
+		fancyboxVimeoLinks.forEach(link => {
+			let id = link.getAttribute('href');
+			if(/https:\/\/vimeo\.com\//i.test(id)) return;
+			link.setAttribute('href', `https://vimeo.com/${id}`)
+		})
 	}
 }

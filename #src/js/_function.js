@@ -138,8 +138,23 @@ spollerInit()
 
 if($('.anchor').length>0) {
 	$(".anchor").click(function() {
-	  var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
-	  var destination = $(elementClick).offset().top - 70;
+		let elementClick;
+		let destination;
+		if($(this).attr("href") && $(this).attr("href").match(/#\w+$/gi)) {
+			elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
+			if(document.getElementById(elementClick)) {
+				destination = $(elementClick).offset().top - 70;
+			} else {
+				destination = $(this).closest('.promo-header').height();
+			}
+		} else {
+			if($(this).closest('.promo-header')) {
+				destination = $(this).closest('.promo-header').height();
+			}
+		}
+	  if($(this).hasClass('btn-default')) {
+		destination = $(elementClick).offset().top - 120;
+	  }
 	  jQuery("html:not(:animated),body:not(:animated)").animate({
 		scrollTop: destination
 	  }, 600);
