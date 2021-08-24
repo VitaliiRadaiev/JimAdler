@@ -386,6 +386,14 @@
             @media (max-width: $md2+px) {
                 margin-bottom: 20px;
             }
+
+            &:nth-child(2) {
+                & .sub-menu__list {
+                    @media (min-width: 992px) {
+                        max-height: 270px;
+                    }
+                }
+            }
         }
     }
 
@@ -464,7 +472,7 @@
     position: absolute;
     top: 100%;
     left: -4px;
-    min-width: 284px;
+    min-width: 300px;
     background: #ffffff;
     padding: 8px 4px 8px 10px;
     animation: subMenuAnim 0.4s ease;

@@ -3406,7 +3406,7 @@ textarea {
   position: absolute;
   top: 100%;
   left: -4px;
-  min-width: 284px;
+  min-width: 300px;
   background: #ffffff;
   padding: 8px 4px 8px 10px;
   -webkit-animation: subMenuAnim 0.4s ease;
@@ -7539,6 +7539,10 @@ textarea {
 
   .menu__list > li {
     padding: 7px 0px;
+  }
+
+  .menu__list > li:nth-child(2) .sub-menu__list {
+    max-height: 270px;
   }
 
   .menu__link {

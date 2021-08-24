@@ -13,9 +13,9 @@
 
         let menuItems = menu.querySelectorAll('.menu-item-has-children');
         if (menuItems.length) {
-            menuItems.forEach(menuItems => {
-                let link = menuItems.querySelector('.menu__link');
-                let subMenu = menuItems.querySelector('.sub-menu');
+            menuItems.forEach(menuItem => {
+                let link = menuItem.querySelector('.menu__link');
+                let subMenu = menuItem.querySelector('.sub-menu');
 
                 link.addEventListener('click', (e) => {
                     if (document.documentElement.clientWidth < 992) {
@@ -24,7 +24,7 @@
                         _slideToggle(subMenu);
 
                         menuItems.forEach(i => {
-                            if (i === menuItems) return;
+                            if (i === menuItem) return;
 
                             let link = i.querySelector('.menu__link');
                             let subMenu = i.querySelector('.sub-menu');
@@ -41,6 +41,7 @@
 
         if(isSafari) {
             menu.querySelector('.menu__wrap').style.paddingBottom = '90px';
+            alert('safari')
         }
     }
 }

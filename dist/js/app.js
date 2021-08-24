@@ -3,7 +3,6 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
-
 let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api"];
 youtubeVimeoUrls.forEach(url => {
 	let tag = document.createElement('script');
@@ -1140,9 +1139,9 @@ document.addEventListener('keydown', function(e) {
 
         let menuItems = menu.querySelectorAll('.menu-item-has-children');
         if (menuItems.length) {
-            menuItems.forEach(menuItems => {
-                let link = menuItems.querySelector('.menu__link');
-                let subMenu = menuItems.querySelector('.sub-menu');
+            menuItems.forEach(menuItem => {
+                let link = menuItem.querySelector('.menu__link');
+                let subMenu = menuItem.querySelector('.sub-menu');
 
                 link.addEventListener('click', (e) => {
                     if (document.documentElement.clientWidth < 992) {
@@ -1151,7 +1150,7 @@ document.addEventListener('keydown', function(e) {
                         _slideToggle(subMenu);
 
                         menuItems.forEach(i => {
-                            if (i === menuItems) return;
+                            if (i === menuItem) return;
 
                             let link = i.querySelector('.menu__link');
                             let subMenu = i.querySelector('.sub-menu');
@@ -1168,6 +1167,7 @@ document.addEventListener('keydown', function(e) {
 
         if(isSafari) {
             menu.querySelector('.menu__wrap').style.paddingBottom = '90px';
+            alert('safari')
         }
     }
 };
