@@ -1164,10 +1164,10 @@ document.addEventListener('keydown', function(e) {
 
             })
         }
-
+        alert(isSafari)
         if(isSafari) {
             menu.querySelector('.menu__wrap').style.paddingBottom = '90px';
-            alert('safari')
+            alert(isSafari)
         }
     }
 };
