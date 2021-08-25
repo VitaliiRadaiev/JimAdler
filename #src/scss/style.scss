@@ -542,6 +542,19 @@ button.btn-default {
 	}
 }
 
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+.text-start {
+	text-align: left !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-end {
+	text-align: right !important;
+}
+
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 22px;
@@ -857,6 +870,7 @@ button.btn-default {
 @import "pages/media-detail";
 @import "pages/covid";
 @import "pages/blog-us";
+@import "pages/privacy-policy";
 
 // ==== AND PAGES =====================================================
 

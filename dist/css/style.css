@@ -2439,7 +2439,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 50;
+  z-index: 101;
   top: 0;
   left: 0;
   opacity: 0;
@@ -3078,6 +3078,22 @@ textarea {
   transition: all 0.3s ease;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
 .text-content {
   font-size: 22px;
   line-height: 152%;
@@ -3238,7 +3254,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 49;
+  z-index: 100;
 }
 
 .header__body {
@@ -7096,6 +7112,7 @@ textarea {
 
   .result-v2-card:hover .result-v2-card__hover-box {
     opacity: 1;
+    visibility: visible;
   }
 
   .result-v2-card:hover > .result-v2-card__num,
@@ -7118,6 +7135,7 @@ textarea {
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    visibility: hidden;
   }
 
   .result-v2-card__hover-box .result-v2-card__num {
@@ -8203,6 +8221,7 @@ textarea {
     max-height: 100%;
     width: 100%;
     overflow-y: auto;
+    padding-bottom: 100px;
   }
 
   .menu__wrap::-webkit-scrollbar {
