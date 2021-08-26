@@ -1,10 +1,7 @@
 .blog-page {
     & .hero {
-        margin-bottom: 30px;
+        margin-bottom: 2px !important;
 
-        @media (max-width: $md3+px) {
-            margin-bottom: 3px;
-        }
         & .hero__title {
             margin-bottom: 7px;
 

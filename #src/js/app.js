@@ -45,10 +45,14 @@ window.addEventListener('load', function () {
 	@@include('../common/rating/rating.js');
 	@@include('../common/footer/footer.js');
 	@@include('../common/preview-block/preview-block.js');
-	@@include('../common/video/video.js');
-
+	@@include('../common/result-v2/result-v2.js');
+	
+	
 	@@include('pages/home.js');
 	@@include('pages/practice-detail.js');
+
+	
+	@@include('../common/video/video.js');
 });
 
 window.addEventListener('DOMContentLoaded', function () {

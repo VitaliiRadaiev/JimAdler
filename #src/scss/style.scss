@@ -113,7 +113,7 @@ body {
 		}
 	}
 
-	&.admin-bar  {
+	&.admin-bar {
 		& .header {
 			top: 32px;
 		}
@@ -262,8 +262,6 @@ textarea {
 	}
 }
 
-
-
 // === title ========================================================================
 .title-1 {
 }
@@ -345,7 +343,7 @@ textarea {
 	text-transform: uppercase;
 
 	&.btn-default_white {
-		background: #FFFFFF;
+		background: #ffffff;
 		color: $mainColor2;
 
 		@media (min-width: 992px) {
@@ -413,7 +411,8 @@ button.btn-default {
 			}
 		}
 
-		& img, & svg {
+		& img,
+		& svg {
 			width: 17px;
 			height: auto;
 		}
@@ -629,6 +628,15 @@ button.btn-default {
 	}
 
 	& h5 {
+		font-size: 28px;
+		line-height: 36px;
+		color: #000000;
+		margin-bottom: 0.7em;
+		font-weight: 500;
+
+		@media (max-width: $md3+px) {
+			font-size: 26px;
+		}
 	}
 	& h6 {
 	}
@@ -673,7 +681,8 @@ button.btn-default {
 		}
 	}
 
-	& q, & blockquote {
+	& q,
+	& blockquote {
 		display: block;
 		padding-left: 16px;
 		position: relative;
@@ -773,10 +782,9 @@ button.btn-default {
 
 			& > li {
 				flex: 0 0 388px;
-				
+
 				@media (min-width: 768px) {
 					padding-right: 20px;
-
 				}
 
 				@media (max-width: $md2+px) {
@@ -815,7 +823,6 @@ button.btn-default {
 	}
 
 	& .col-2 {
-
 		@media (min-width: 992px) {
 			text-align: left;
 			column-count: 2;
@@ -826,7 +833,6 @@ button.btn-default {
 			text-align: left;
 		}
 	}
-
 }
 // === and TEXT CONTETN BLOCK ========================================================================
 
@@ -874,11 +880,10 @@ button.btn-default {
 
 // ==== AND PAGES =====================================================
 
-
 .fancybox-slide--iframe .fancybox-content {
-    width  : 800px;
-    height : 600px !important;
-    max-width  : 95%;
-    max-height : 80%;
-    margin: 0;
+	width: 800px;
+	height: 600px !important;
+	max-width: 95%;
+	max-height: 80%;
+	margin: 0;
 }

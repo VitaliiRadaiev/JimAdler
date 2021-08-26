@@ -171,7 +171,7 @@
 
         @media (max-width: $md3+px) {
             display: block;
-            margin: 0 0 49px;
+            margin: 0 0 49px !important;
         }
 
         & > li {
@@ -206,11 +206,6 @@
                 }
             }
 
-            &:nth-last-child(-n + 2) {
-                @media (min-width: 768px) {
-                    margin-bottom: 0;
-                }
-            }
         }
     }
 
