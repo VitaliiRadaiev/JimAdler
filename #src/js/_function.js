@@ -222,3 +222,20 @@ function cropText(el, count) {
 	let text = [...el.innerText].slice(0, count).join('') + '...';
 	el.innerText = text;
 }
+
+
+function linkToPhoneOnMobile() {
+	if(document.documentElement.clientWidth < 768) {
+		let links = document.querySelectorAll('[data-call-mob]');
+		if(links.length) {
+			links.forEach(link => {
+				let phone = link.dataset.callMob.trim();
+				if(phone) {
+					link.setAttribute('href', `tel:${phone}`);
+				}
+			})
+		}
+	}
+}
+
+linkToPhoneOnMobile();

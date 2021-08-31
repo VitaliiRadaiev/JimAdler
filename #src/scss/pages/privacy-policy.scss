@@ -53,6 +53,15 @@
                        }
                     }   
                 }
+
+                & > hr {
+                    display: block;
+                    width: calc(100% + 100px);
+                    transform: translateX(-50px);
+                    height: 1px;
+                    background-color: rgba(#BFCCD1, 0.3);
+                    border: none;
+                }
             }
         }
     }

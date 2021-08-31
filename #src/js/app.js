@@ -3,12 +3,31 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
-let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api"];
+let youtubeVimeoUrls = ["https://player.vimeo.com/api/player.js", "https://www.youtube.com/iframe_api"];
 youtubeVimeoUrls.forEach(url => {
 	let tag = document.createElement('script');
 	tag.src = url;
 	document.body.prepend(tag);
 })
+
+let language = document.documentElement.lang;
+if(language === 'en-US') {
+	document.body.classList.add('english-lang');
+} else if (language === 'es-ES') {
+	document.body.classList.add('spanish-lang');
+}
+
+let vimeoPosters = document.querySelectorAll('[data-cs-vimeo-poster]');
+if(vimeoPosters.length) {
+	vimeoPosters.forEach(el => {
+		setPosterVimeo(el);
+	})
+}
+
+function setPosterVimeo(el) {
+	let url = el.dataset.csVimeoPoster;
+	el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="">`)
+}
 
 window.addEventListener('load', function () {
 
@@ -33,6 +52,7 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
+	@@include('../common/video/video.js');
 	@@include('files/dynamic_adapt.js');
 	@@include('forms.js');
 	@@include('../common/burger/burger.js');
@@ -52,7 +72,7 @@ window.addEventListener('load', function () {
 	@@include('pages/practice-detail.js');
 
 	
-	@@include('../common/video/video.js');
+	
 });
 
 window.addEventListener('DOMContentLoaded', function () {

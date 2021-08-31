@@ -70,6 +70,14 @@
     }
 }
 
+body.spanish-lang {
+    & .attorneys-detail__aside:before {
+        @media (min-width: 992px) {
+            right: 24px;
+        }
+    }
+}
+
 .attorneys-detail {
     padding-top: 84px;
     overflow: hidden;

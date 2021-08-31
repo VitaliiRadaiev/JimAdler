@@ -1,15 +1,22 @@
 {
 	let vimeoVideos = document.querySelectorAll('[data-cs-vimeo-id]');
 	if(vimeoVideos.length) {
-		vimeoVideos.forEach(video => {
+		vimeoVideos.forEach(async video => {
 			let id = video.dataset.csVimeoId;
 
-			if(document.documentElement.clientWidth < 767.98) {
+			if(document.documentElement.clientWidth < 992) {
 				if(video.dataset.csVimeoMobileId.trim()) {
 					id = video.dataset.csVimeoMobileId;
 				}
 			}
-			video.innerHTML = `  <iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" ></iframe>`
+			let player = await new Vimeo.Player(video, {
+				id,
+				autoplay: true,
+				controls: false,
+				muted: true,
+				loop: true,
+			})
+			//video.innerHTML = `  <iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp;background=1&amp"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay;" ></iframe>`
 		})
 	}
 	
@@ -21,7 +28,7 @@
 			video.append(videoContainer);
 			let videoId = video.dataset.youtubeId;
 
-			if(document.documentElement.clientWidth < 767.98) {
+			if(document.documentElement.clientWidth < 992) {
 				if(video.dataset.youtubeMobileId.trim()) {
 					videoId = video.dataset.youtubeMobileId;
 				}
@@ -63,7 +70,7 @@
 		}
 	}
 
-	if(document.documentElement.clientWidth < 767.98) {
+	if(document.documentElement.clientWidth < 992) {
 		setMobileVideoForBanner()
 	}
 
