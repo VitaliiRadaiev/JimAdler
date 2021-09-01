@@ -3,7 +3,7 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 
-let youtubeVimeoUrls = ["https://player.vimeo.com/api/player.js", "https://www.youtube.com/iframe_api"];
+let youtubeVimeoUrls = ["https://www.youtube.com/iframe_api"];
 youtubeVimeoUrls.forEach(url => {
 	let tag = document.createElement('script');
 	tag.src = url;
@@ -23,9 +23,19 @@ if(vimeoPosters.length) {
 		setPosterVimeo(el);
 	})
 }
+let youtubePosters = document.querySelectorAll('[data-youtube-poster]');
+if(youtubePosters.length) {
+	youtubePosters.forEach(el => {
+		setPosterYoutube(el);
+	})
+}
 
 function setPosterVimeo(el) {
 	let url = el.dataset.csVimeoPoster;
+	el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="">`)
+}
+function setPosterYoutube(el) {
+	let url = el.dataset.youtubePoster;
 	el.insertAdjacentHTML('beforeend', `<img src="${url}" alt="">`)
 }
 
@@ -297,20 +307,65 @@ linkToPhoneOnMobile();;
 	if(vimeoVideos.length) {
 		vimeoVideos.forEach(async video => {
 			let id = video.dataset.csVimeoId;
-
+			let img = video.querySelector('img');
+			
 			if(document.documentElement.clientWidth < 992) {
 				if(video.dataset.csVimeoMobileId.trim()) {
 					id = video.dataset.csVimeoMobileId;
 				}
 			}
-			let player = await new Vimeo.Player(video, {
-				id,
-				autoplay: true,
-				controls: false,
-				muted: true,
-				loop: true,
-			})
-			//video.innerHTML = `  <iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp;background=1&amp"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay;" ></iframe>`
+			// let player = await new Vimeo.Player(video, {
+			// 	id,
+			// 	autoplay: true,
+			// 	controls: false,
+			// 	muted: true,
+			// 	loop: true,
+			// })
+			video.insertAdjacentHTML('beforeend', `<iframe src="https://player.vimeo.com/video/${id}?muted=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp;background=1&amp"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay;" ></iframe>`);
+			let iframe = video.querySelector('iframe')
+			iframe.onload = () => {
+				if(img) {
+					img.style.opacity = 0;
+				}
+			}
+
+			setCoverVideoIframe(iframe, video);
+
+		})
+	}
+
+	function setCoverVideoIframe(iframe, parent) {
+		if(parent.clientWidth > 1282) {
+			iframe.style.width = '100%';
+			iframe.style.height = parent.clientWidth * 0.57 + 'px';
+		} else if(parent.clientWidth < 992) {
+			if((parent.clientWidth / parent.clientHeight * 100) < 79.929) {
+				iframe.style.width = parent.clientHeight * 0.8 + 'px';
+				iframe.style.height = '100%';
+			} else {
+				iframe.style.width = '100%';
+				iframe.style.height = parent.clientWidth * 1.25 + 'px';
+			}
+		} else {
+			iframe.style.width = parent.clientHeight * 1.8 + 'px';
+			iframe.style.height = '100%';
+		}
+		window.addEventListener('resize', () => {
+			if(parent.clientWidth > 1282) {
+				iframe.style.width = '100%';
+				iframe.style.height = parent.clientWidth * 0.57 + 'px';
+			} else if(parent.clientWidth < 992) {
+				if((parent.clientWidth / parent.clientHeight * 100) < 79.929) {
+					iframe.style.width = parent.clientHeight * 0.8 + 'px';
+					iframe.style.height = '100%';
+				} else {
+					iframe.style.width = '100%';
+					iframe.style.height = parent.clientWidth * 1.25 + 'px';
+				}
+			} else {
+				iframe.style.width = parent.clientHeight * 1.8 + 'px';
+				iframe.style.height = '100%';
+			}
 		})
 	}
 	
@@ -321,6 +376,7 @@ linkToPhoneOnMobile();;
 			let videoContainer = document.createElement('div');
 			video.append(videoContainer);
 			let videoId = video.dataset.youtubeId;
+			let img = video.querySelector('img');
 
 			if(document.documentElement.clientWidth < 992) {
 				if(video.dataset.youtubeMobileId.trim()) {
@@ -342,6 +398,10 @@ linkToPhoneOnMobile();;
 					onReady: (e) => {
 						e.target.mute();
 						e.target.playVideo();
+
+						if(img) {
+							img.style.opacity = 0;
+						}
 					}
 				}
 			});
