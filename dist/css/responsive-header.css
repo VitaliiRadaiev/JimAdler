@@ -123,8 +123,17 @@
     }
   }
   @media (max-width: 991.98px) {
+    .is-load .header div[data-da="menu__wrap,1,991.98"] {
+      display: block;
+    }
+
+
     .header {
       background: #242424;
+    }
+
+    .header div[data-da="menu__wrap,1,991.98"] {
+      display: none;
     }
   
     .header__body {

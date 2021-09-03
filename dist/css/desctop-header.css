@@ -16,7 +16,7 @@
     width: 100%;
     z-index: 100;
   }
-  
+
   .header__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -221,6 +221,7 @@
   }
   
   .sub-menu__link {
+    text-decoration: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
