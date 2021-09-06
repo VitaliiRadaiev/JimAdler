@@ -2852,6 +2852,25 @@ textarea {
   color: #AD7D45;
 }
 
+.btn-white {
+  display: inline-flex;
+  min-height: 50px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+
+.btn-white:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
 .slider-group-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3368,6 +3387,24 @@ textarea {
   background-color: #000;
 }
 
+.result__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.result__head .btn-white {
+  margin-bottom: 77px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: flex-start;
+}
+
 .result__body {
   color: #fff;
 }
@@ -3383,6 +3420,10 @@ textarea {
   text-transform: uppercase;
   position: relative;
   margin-bottom: 77px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-right: 20px;
 }
 
 .result__flex-wrap {

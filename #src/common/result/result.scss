@@ -217,6 +217,27 @@
         }
     }
 
+    &__head {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+        & .result__title {
+            flex: 0 1 auto;
+            width: auto;
+        }
+
+        & .bnt-white {
+            @media (max-width: $md2+px) {
+                margin-bottom: 123px;
+            }
+    
+            @media (max-width: $md3+px) {
+                margin-bottom: 119px;
+            }
+        }
+    }
+
     &__title {
         font-weight: 600;
         font-size: 28px;
