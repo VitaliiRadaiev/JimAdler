@@ -64,7 +64,29 @@
 			}
 		})
 	}
+
+	let cloudFlareVideos = document.querySelectorAll('[data-cloudflare-vimeo-id]');
+	if(cloudFlareVideos.length) {
+		cloudFlareVideos.forEach(video => {
+			let id = video.dataset.cloudflareVimeoId;
+
+			if(document.documentElement.clientWidth < 992) {
+				if(video.dataset.cloudflareVimeoId.trim()) {
+					id = video.dataset.cloudflareVimeoId;
+				}
+			}
+
+			video.insertAdjacentHTML('beforeend', `<iframe src="https://iframe.videodelivery.net/${id}?autoplay=true&muted=true&controls=false" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>`);
+			let iframe = video.querySelector('iframe');
+
+			setCoverVideoIframe(iframe, video);
+		})
+	}
 	
+// 	<iframe src="https://iframe.videodelivery.net/3f3e2490ee3e499153661557d07471d9?autoplay=true&muted=true&controls=false" title="Example Stream video"
+// 	frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+// 	allowFullScreen>
+// </iframe>
 
 	let youtubeVideos = document.querySelectorAll('[data-youtube-id]');
 	if (youtubeVideos.length) {

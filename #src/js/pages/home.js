@@ -60,13 +60,13 @@
 
                 wrapper.append(div);
 
-                let btn = document.querySelector('.about-us-block__mobile-btn');
-                if(btn) {
-                    btn.addEventListener('click', function () {
-                        _slideDown(div);
-                        this.style.display = 'none';
-                    })
-                }
+                // let btn = document.querySelector('.about-us-block__mobile-btn');
+                // if(btn) {
+                //     btn.addEventListener('click', function () {
+                //         _slideDown(div);
+                //         this.style.display = 'none';
+                //     })
+                // }
             }
 
         }
