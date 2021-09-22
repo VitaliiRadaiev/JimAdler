@@ -134,8 +134,13 @@
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 2px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
   }
-  
+
+
   .header__phone {
     font-weight: 600;
     font-size: 28px;
@@ -246,8 +251,8 @@
   }
   
   .sub-menu__list::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 4px;
+    height: 4px;
   }
   
   .sub-menu__list::-webkit-scrollbar-thumb {

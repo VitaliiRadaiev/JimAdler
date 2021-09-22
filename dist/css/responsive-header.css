@@ -67,6 +67,10 @@
     .header__phone:hover {
       color: #AD7D45;
     }
+
+    .header__text:hover {
+      color: #AD7D45;
+    }
   
     .menu__wrap {
       padding-bottom: 0 !important;
