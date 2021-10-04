@@ -4,8 +4,8 @@
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -o-linear-gradient(left, black 0%, #565656 100%);
   background: -webkit-gradient(linear, left top, right top, from(black), to(#565656));
+  background: -o-linear-gradient(left, black 0%, #565656 100%);
   background: linear-gradient(to right, black 0%, #565656 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#565656",GradientType=1 );
@@ -176,35 +176,40 @@
 
 .menu-item-has-children {
   position: relative;
-}
 
-.menu-item-has-children > .sub-menu__link {
-  padding-right: 25px;
-  position: relative;
-}
+  & > .sub-menu__link {
+    padding-right: 25px;
+    position: relative;
 
-.menu-item-has-children > .sub-menu__link:before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/icons/plus-black.svg);
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 8px;
-  width: 16px;
-  height: 16px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: block;
-  background-size: contain;
-}
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(../img/icons/plus-black.svg);
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+      width: 16px;
+      height: 16px;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      display: block;
+      background-size: contain;
 
-.menu-item-has-children > .sub-menu__link.is-open:before {
-  -webkit-transform: translateY(-50%) rotate(45deg);
-      -ms-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
+      @media (max-width: 991.98px) {
+        background-image: url(../img/icons/plus.svg);
+        width: 21px;
+        height: 21px;
+        right: -6px;
+      }
+    }
+
+    &.is-open {
+      &:before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
 }
 
 .menu-item-has-children .menu__link {
@@ -215,6 +220,7 @@
 .sub-menu {
   z-index: 1;
   display: none;
+  //display: block;
   position: absolute;
   top: 100%;
   left: -4px;
@@ -223,17 +229,16 @@
   padding: 8px 4px 8px 10px;
   -webkit-animation: subMenuAnim 0.4s ease;
   animation: subMenuAnim 0.4s ease;
-}
 
-.sub-menu .sub-menu {
-  position: relative;
-  padding-left: 20px;
-  min-width: auto;
-}
-
-.sub-menu .sub-menu .sub-menu__link {
-  font-size: 16px;
-  min-height: 40px;
+  & .sub-menu {
+    position: relative;
+    padding-left: 20px;
+    min-width: auto;
+    & .sub-menu__link {
+      font-size: 16px;
+      min-height: 40px;
+    }
+  }
 }
 
 @-webkit-keyframes subMenuAnim {
@@ -283,6 +288,8 @@
   line-height: 23px;
   text-transform: uppercase;
   margin-right: 3px;
+
+  
 }
 
 .sub-menu__list {
@@ -309,13 +316,4 @@
   border-radius: 10px;
   -webkit-box-shadow: inset 0px 0px 0px 0px #f0f0f0;
   box-shadow: inset 0px 0px 0px 0px #f0f0f0;
-}
-
-@media (max-width: 991.98px) {
-  .menu-item-has-children > .sub-menu__link:before {
-    background-image: url(../img/icons/plus.svg);
-    width: 21px;
-    height: 21px;
-    right: -6px;
-  }
 }

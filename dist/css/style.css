@@ -7662,7 +7662,7 @@ textarea {
     color: #AD7D45;
   }
 
-  .menu-item-has-children:hover .sub-menu {
+  .menu-item-has-children:hover > .sub-menu {
     display: block;
   }
 

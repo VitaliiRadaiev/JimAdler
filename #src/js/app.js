@@ -14,10 +14,11 @@ window.addEventListener('load', function () {
 			let header = document.querySelector('.header');
 			if (header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
+				setPedding();
+				let id = setInterval(setPedding, 200);
 				setTimeout(() => {
-					setPedding();
-				}, 100)
-
+					clearInterval(id);
+				},1000)
 				window.addEventListener('resize', setPedding);
 			}
 

@@ -460,7 +460,7 @@
     
     @media (min-width: 992px) {
         &:hover {
-            & .sub-menu {
+            & > .sub-menu {
                 display: block;
             }
         }
