@@ -62,7 +62,7 @@
 
   .hero__body {
     min-height: 433px;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
   }
 
   .hero__subtitle {
@@ -207,6 +207,7 @@
   .about-us-block__row-2 {
     min-height: 617px;
     padding-top: 43px;
+    padding-bottom: 40px;
   }
 
   .about-us-block__row-2:before {
@@ -580,7 +581,7 @@
 
   .hero__body {
     min-height: 334px;
-    padding-bottom: 78px;
+    padding-bottom: 30px;
   }
 
   .text-intro-block {
@@ -3281,9 +3282,9 @@
 
   .result-v2__bottom .btn-default {
     min-width: 196px;
-    min-height: 60px;
-    font-size: 22px;
-    line-height: 28px;
+    min-height: 54px;
+    font-size: 18px;
+    line-height: 23px;
   }
 
   .result-v2-card__num {
@@ -3671,7 +3672,7 @@
   }
 
   .about-us-block__slider .swiper-slide {
-    height: 276px;
+    min-height: 276px;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     display: -webkit-box;

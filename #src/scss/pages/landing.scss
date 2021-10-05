@@ -1,0 +1,16 @@
+.landing-page {
+    & .hero {
+        margin-bottom: 0;
+    }
+
+    & .result-v2 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        margin-bottom: 0;
+
+        @media (max-width: $md3+px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+}

@@ -724,7 +724,7 @@ function inputs_init(inputs) {
 				//'+375(99)999-99-99'
 				let maskValue = input.dataset.mask;
 				input.classList.add('_mask');
-				Inputmask(maskValue, {
+				Inputmask('+9(999) 999 9999', {
 					//"placeholder": '',
 					clearIncomplete: true,
 					clearMaskOnLostFocus: true,
@@ -1321,7 +1321,10 @@ document.addEventListener('keydown', function(e) {
     let testimonialSlider = document.querySelector('.testimonial-text__slider');
     if(testimonialSlider) {
         let slider = new Swiper(testimonialSlider.querySelector('.swiper-container'), {
-
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
             observer: true,
             observeParents: true,
             slidesPerView: 1,
@@ -1550,6 +1553,24 @@ function setrating(th, val) {
                 item.style.marginBottom = height + 'px';
             }
         })
+    }
+};
+	{
+    let heroV2 = document.querySelector('.hero-v2');
+    if(heroV2) {
+        let heroBg = heroV2.querySelector('.hero-v2__bg');
+        let heroCol1 = heroV2.querySelector('.hero-v2__col-1');
+
+        if(heroBg && heroCol1) {
+            const setBgHeight = () => {
+                if(document.documentElement.clientWidth < 768) {
+                    heroBg.style.height = heroCol1.clientHeight + 'px';
+                }
+            }
+
+            setBgHeight();
+            window.addEventListener('resize', setBgHeight);
+        }
     }
 };
 	

@@ -1,3 +1,7 @@
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
@@ -15,7 +19,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -962,7 +966,8 @@ body.compensate-for-scrollbar {
   );
   background: -webkit-gradient(
     linear,
-    left bottom, left top,
+    left bottom,
+    left top,
     from(rgba(0, 0, 0, 0.85)),
     color-stop(50%, rgba(0, 0, 0, 0.3)),
     color-stop(65%, rgba(0, 0, 0, 0.15)),
@@ -2854,6 +2859,13 @@ textarea {
   font-weight: 400;
 }
 
+.title-4 {
+  font-family: $titleFontFamily;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 120%;
+}
+
 .btn-default {
   text-decoration: none;
   display: -webkit-inline-box;
@@ -2877,6 +2889,11 @@ textarea {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
+
+  &.btn-default_black {
+    background-color: #191919;
+    color: #fff;
+  }
 }
 
 .btn-default.btn-default_white {
@@ -2892,11 +2909,11 @@ textarea {
   background-color: transparent;
   border: 2px solid #fff;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px 30px;
   font-size: 22px;
   text-decoration: none;
@@ -3076,6 +3093,15 @@ textarea {
   line-height: 75px;
   color: #000000;
   margin-bottom: 14px;
+
+  & > a {
+    color: $mainColor2;
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .text-content h3 {
@@ -3787,6 +3813,10 @@ textarea {
   color: #48494b;
   margin: 0 auto 40px;
   max-width: 995px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .text-block__text.text-content p {
@@ -4042,6 +4072,10 @@ textarea {
 .hero {
   position: relative;
   margin-bottom: 50px;
+
+  & .result-v2__bottom {
+    padding-top: 20px;
+  }
 }
 
 .hero.hero_v2 .hero__body {
@@ -4357,7 +4391,7 @@ textarea {
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 920px;
-  margin: 0 auto 130px;
+  margin: 0 auto 0px;
 }
 
 .result-v2__list > li {
@@ -4637,7 +4671,13 @@ textarea {
   height: 100%;
   z-index: 1;
   background: -o-linear-gradient(right, #121212 54.93%, rgba(26, 26, 26, 0) 92.85%);
-  background: -webkit-gradient(linear, right top, left top, color-stop(54.93%, #121212), color-stop(92.85%, rgba(26, 26, 26, 0)));
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(54.93%, #121212),
+    color-stop(92.85%, rgba(26, 26, 26, 0))
+  );
   background: linear-gradient(270deg, #121212 54.93%, rgba(26, 26, 26, 0) 92.85%);
 }
 
@@ -4671,7 +4711,13 @@ textarea {
   width: 96%;
   height: 139px;
   background: -o-linear-gradient(top, rgba(18, 18, 18, 0) -51.91%, #121212 45.5%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-51.91%, rgba(18, 18, 18, 0)), color-stop(45.5%, #121212));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(-51.91%, rgba(18, 18, 18, 0)),
+    color-stop(45.5%, #121212)
+  );
   background: linear-gradient(180deg, rgba(18, 18, 18, 0) -51.91%, #121212 45.5%);
   z-index: 2;
 }
@@ -4898,13 +4944,25 @@ textarea {
 
 .preview-block.preview-block_dark .preview-block__slider-control:before {
   background: -o-linear-gradient(left, #212121 3.03%, rgba(33, 33, 33, 0) 96.1%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(3.03%, #212121), color-stop(96.1%, rgba(33, 33, 33, 0)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(3.03%, #212121),
+    color-stop(96.1%, rgba(33, 33, 33, 0))
+  );
   background: linear-gradient(90deg, #212121 3.03%, rgba(33, 33, 33, 0) 96.1%);
 }
 
 .preview-block.preview-block_dark .preview-block__slider-control:after {
   background: -o-linear-gradient(right, #212121 3.03%, rgba(33, 33, 33, 0) 96.1%);
-  background: -webkit-gradient(linear, right top, left top, color-stop(3.03%, #212121), color-stop(96.1%, rgba(33, 33, 33, 0)));
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(3.03%, #212121),
+    color-stop(96.1%, rgba(33, 33, 33, 0))
+  );
   background: linear-gradient(270deg, #212121 3.03%, rgba(33, 33, 33, 0) 96.1%);
 }
 
@@ -5279,6 +5337,32 @@ textarea {
   }
 }
 
+.about-us-block {
+  &.about-us-block_v2 {
+    & .about-us-block__slide-icon {
+      margin-bottom: 58px;
+
+      @media (max-width: $md3+px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    & .about-us-block__slide-text {
+      @media (min-width: 768px) {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  &__slide-sub-text {
+    color: #fff;
+    @media (min-width: 768px) {
+      padding: 0 15px;
+    }
+  }
+
+}
+
 .about-us-block__row-1 {
   position: relative;
 }
@@ -5524,7 +5608,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 280px;
-  margin-top: 35px;
+  margin-top: 43px;
 }
 
 .about-page .hero .hero__title.title-3 {
@@ -6868,7 +6952,7 @@ textarea {
 
 .about-us-block.thank-you-block .about-us-block__bg img {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 .about-us-block.thank-you-block .about-us-block__body {
   display: -webkit-box;
@@ -6876,11 +6960,11 @@ textarea {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-height: calc(100vh - 90px);
   max-width: 1298px;
   padding-top: 35px;
@@ -6925,21 +7009,24 @@ textarea {
   font-size: 22px;
   line-height: 150%;
   font-weight: 600;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   color: #fff;
 }
 
 .link-phone:hover {
-  color: #AD7D45;
+  color: #ad7d45;
 }
 
 .btn-default.transparent {
-  border: 2px solid #B91216;
+  border: 2px solid #b91216;
   background-color: transparent;
 }
 
+@import "../common/hero-v2/hero-v2";
+@import "../common/advantages/advantages";
 
+@import "pages/landing";
 /* ======== */
