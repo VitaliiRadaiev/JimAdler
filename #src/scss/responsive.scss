@@ -859,18 +859,21 @@
     max-width: 1330px;
   }
 
-  .about-us-block__bg-line.line-1 {
-    left: 25%;
+  .about-us-block:not(.about-us-block_v2) {
+    .about-us-block__bg-line.line-1 {
+      left: 25%;
+    }
+  
+    .about-us-block__bg-line.line-2 {
+      left: 50%;
+    }
+  
+    .about-us-block__bg-line.line-3 {
+      display: block;
+      left: 75%;
+    }
   }
 
-  .about-us-block__bg-line.line-2 {
-    left: 50%;
-  }
-
-  .about-us-block__bg-line.line-3 {
-    display: block;
-    left: 75%;
-  }
 }
 
 @media (max-width: 1267.98px) {

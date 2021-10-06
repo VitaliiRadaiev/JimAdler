@@ -3,6 +3,8 @@
     if (slider) {
         let mySwiper;
 
+        let hasMode = !!slider.closest('.about-us-block_v2');
+
         function mobileSlider() {
             if (document.documentElement.clientWidth > 767.98 && slider.dataset.mobile == 'false') {
                 mySwiper = new Swiper(slider.querySelector('.swiper-container'), {
@@ -22,7 +24,7 @@
                             spaceBetween: 0,
                         },
                         1920: {
-                            slidesPerView: 4,
+                            slidesPerView: hasMode ? 3 : 4,
                             spaceBetween: 0,
                         },
                     },

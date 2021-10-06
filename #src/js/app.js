@@ -41,6 +41,7 @@ window.addEventListener('load', function () {
 	@@include('../common/preview-block/preview-block.js');
 	@@include('../common/result-v2/result-v2.js');
 	@@include('../common/hero-v2/hero-v2.js');
+	@@include('../common/bottom-cta/bottom-cta.js');
 	
 	
 	@@include('pages/home.js');

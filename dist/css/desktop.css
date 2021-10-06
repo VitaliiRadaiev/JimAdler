@@ -7033,11 +7033,6 @@ textarea {
   line-height: 83px;
 }
 
-.hero-v2__title.title-3 {
-  font-size: 42px;
-  line-height: 48px;
-}
-
 .hero-v2__subtitle {
   font-weight: 300;
   font-size: 28px;
@@ -7181,6 +7176,38 @@ textarea {
           transform: translateX(-50%);
 }
 
+.bottom-cta {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 48;
+  background: #F5F0E9;
+}
+
+.bottom-cta__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 111px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bottom-cta__title {
+  margin-right: 25px;
+  font-size: 65px;
+  line-height: 75px;
+  color: #AD7D45;
+  font-family: "Unna", sans-serif;
+}
+
 .landing-page .hero {
   margin-bottom: 0;
 }
@@ -7303,6 +7330,24 @@ textarea {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
+
+  .bottom-cta__title {
+    font-size: 51px;
+    line-height: 59px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottom-cta__body {
+    text-align: center;
+    display: block;
+    padding-bottom: 12px;
+    padding-top: 5px;
+  }
+
+  .bottom-cta__body .btn-default {
+    width: 280px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -7361,6 +7406,13 @@ textarea {
   .advantages__title.title-4 {
     font-size: 30px;
     line-height: 35px;
+  }
+
+  .bottom-cta__title {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 5px;
+    margin-right: 0;
   }
 
   .landing-page .result-v2 {
