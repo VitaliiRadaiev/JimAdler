@@ -315,17 +315,7 @@ function inputs_init(inputs) {
 					}
 				}).mask(input);
 			}
-			if (input.classList.contains('_date')) {
-				datepicker(input, {
-					formatter: (input, date, instance) => {
-						const value = date.toLocaleDateString()
-						input.value = value
-					},
-					onSelect: function (input, instance, date) {
-						input_focus_add(input.el);
-					}
-				});
-			}
+
 
 			//const input_g_value = input.getAttribute('data-value');
 			//input_placeholder_add(input);

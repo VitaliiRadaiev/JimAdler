@@ -1,0 +1,324 @@
+.quiz {
+    
+    @media (min-width: 992px) {
+        background: #f5f0e9;
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__btn-back {
+        position: absolute;
+        z-index: 50;
+        left: 50px;
+        top: 50px;
+        padding: 5px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 600;
+        visibility: hidden;
+        opacity: 0;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        & img {
+            flex: 0 0 auto;
+            margin-right: 22px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#000, 0.1);
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            left: 15px;
+        }
+    }
+
+    &__item {
+        display: none;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &.active {
+            display: block;
+            animation: quizItem 0.4s ease forwards;
+        }
+
+        @keyframes quizItem {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.item-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 567px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    &__head {
+        text-align: center;
+        margin-bottom: 27px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        color: $mainColor2;
+        margin-bottom: 30px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+
+            &.title-3 {
+                font-size: 42px;
+            }
+        }
+    }
+
+    &__body {
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__question {
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 17px;
+        font-weight: 500;
+
+        @media (max-width: $md3+px) {
+            font-size: 24px;
+        }
+    }
+
+    &__answers {
+        position: relative;
+
+        & .date-input-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        & .qs-datepicker-container {
+            transition: all .3s ease !important;
+            opacity: 0;
+            pointer-events: none;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            font-size: 17px;
+
+            &.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__answers-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+
+        & .input {
+            min-height: 56px;
+            color: #000;
+            position: relative;
+
+            &::placeholder {
+                color: #000;
+            }
+
+            &._year, &._month, &._day {
+                pointer-events: none;
+            }
+        }
+
+        & img {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: inline-block;
+        }
+
+        & .btn-default {
+            align-self: center;
+        }
+
+        &.error {
+            & input {
+                border: 1px solid red;
+            }
+        }
+
+        & .error-text {
+            position: absolute;
+            top: 100%;
+            left: 2px;
+            font-size: 12px;
+            line-height: 1em;
+            color: red;
+        }
+    }
+}
+
+.quiz-radio {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+
+    & input {
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+
+        &:checked {
+            & ~ .quiz-radio__text {
+                background: #b91216;
+                color: #fff;
+            }
+
+            & ~ .quiz-radio__icon svg,
+            & ~ .quiz-radio__arrow svg {
+                & path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 16px;
+        height: 100%;
+        width: 45px;
+        transform: translateY(-50%);
+
+        & img,
+        & svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__text {
+        display: flex;
+        min-height: 56px;
+        transition: all 0.2s ease;
+        background-color: #fff;
+        align-items: center;
+        padding: 12px 45px 12px 78px;
+        position: relative;
+        z-index: 1;
+        color: #000;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba($mainColor, 0.1);
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            background: #F5F0E9;
+            padding: 12px 28px 12px 78px;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        right: 27px;
+        transform: translateY(-50%);
+
+        @media (max-width: $md3+px) {
+            right: 15px;
+        }
+
+        & img,
+        & svg {
+            width: 9px;
+            height: auto;
+        }
+    }
+}
+
+.quiz-message {
+    text-align: center;
+
+    &__title {
+        color: $mainColor2;
+        margin-bottom: 5px;
+
+        &.title-3 {
+            font-size: 51px;
+        }
+    }
+
+    &__text {
+        max-width: 472px;
+        margin: 0 auto 30px;
+        padding: 0 10px;
+
+        &.text-content {
+            font-size: 24px;
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+    }
+}

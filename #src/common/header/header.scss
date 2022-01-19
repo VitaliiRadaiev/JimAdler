@@ -109,6 +109,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        & .header__top-menu {
+            margin-right: 30px;
+        }
     }
 
     &__row-2 {

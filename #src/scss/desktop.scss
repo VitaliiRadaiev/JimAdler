@@ -6319,7 +6319,8 @@ textarea {
 .faq__list-title:before {
   position: absolute;
   content: "";
-  top: 32px;
+  top: 50%;
+  transform: translateY(-50%);
   left: -1px;
   width: 8px;
   height: 8px;
@@ -7028,6 +7029,9 @@ textarea {
 @import "../common/hero-v2/hero-v2";
 @import "../common/advantages/advantages";
 @import "../common/bottom-cta/bottom-cta";
+@import "./plagins/datepicker";
+@import "../common/quiz/quiz";
+@import "../common/subscribe/subscribe";
 
 @import "pages/landing";
 /* ======== */

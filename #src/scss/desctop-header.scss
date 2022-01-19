@@ -15,6 +15,40 @@
   left: 0;
   width: 100%;
   z-index: 100;
+
+  & .social {
+    & > li {
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & a {
+        background-color: transparent;
+
+        & svg {
+          & path {
+            fill: #fff;
+            transition: all .3s ease;
+            &[fill="white"] {
+              fill: #1E1E1E !important;
+            }
+          }
+        }
+
+        @media (min-width: 992px) {
+          &:hover {
+            background-color: transparent;
+
+            & svg path {
+              fill: #AD7D45;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .header__body {
@@ -66,6 +100,11 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+
+  & .header__top-menu {
+    margin-right: 25px;
+  }
+
 }
 
 .header__search {
@@ -160,6 +199,7 @@
 
 .menu .btn-default {
   min-width: 300px;
+  margin-bottom: 20px;
 }
 
 .menu__link {
