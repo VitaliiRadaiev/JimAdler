@@ -341,7 +341,8 @@ textarea {
 	font-size: 22px;
 	line-height: 28px;
 	text-transform: uppercase;
-
+	cursor: pointer; 
+	
 	&.btn-default_white {
 		background: #ffffff;
 		color: $mainColor2;

@@ -2889,6 +2889,8 @@ textarea {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
 
   &.btn-default_black {
     background-color: #191919;

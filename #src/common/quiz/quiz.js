@@ -82,7 +82,7 @@ class Quiz {
                     }
                 }
             }
-        }, 300);
+        }, 100);
     }
 
     prev() {
@@ -167,7 +167,7 @@ class Quiz {
                 this._toggleShowBtnBack(true);
             }
     
-        }, 300);
+        }, 100);
 
     }
 }
@@ -195,45 +195,78 @@ if (quizBlock) {
     }
     
 
-    (function quizDateHandler() {
-        let inputsHiddenDate = quizBlock.querySelectorAll('.date-input-wrap');
-        if (inputsHiddenDate.length) {
-            inputsHiddenDate.forEach(inputWrap => {
-                let input = inputWrap.firstElementChild;
+    // (function quizDateHandler() {
+    //     let inputsHiddenDate = quizBlock.querySelectorAll('.date-input-wrap');
+    //     if (inputsHiddenDate.length) {
+    //         inputsHiddenDate.forEach(inputWrap => {
+    //             let input = inputWrap.firstElementChild;
 
-                datepicker(input, {
-                    formatter: (input, date, instance) => {
-                        const value = date.toLocaleDateString();
-                        input.value = value;
+    //             // datepicker(input, {
+    //             //     formatter: (input, date, instance) => {
+    //             //         const value = date.toLocaleDateString();
+    //             //         input.value = value;
 
-                        let parent = inputWrap.closest('.item-quiz__answers');
-                        let year = parent.querySelector('._year');
-                        let month = parent.querySelector('._month');
-                        let day = parent.querySelector('._day');
+    //             //         let parent = inputWrap.closest('.item-quiz__answers');
+    //             //         let year = parent.querySelector('._year');
+    //             //         let month = parent.querySelector('._month');
+    //             //         let day = parent.querySelector('._day');
 
-                        year.value = date.getFullYear();
-                        month.value = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1).toString() : (date.getMonth() + 1);
-                        day.value = date.getDate() < 10 ? '0' + date.getDate().toString() : date.getDate();
+    //             //         year.value = date.getFullYear();
+    //             //         month.value = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1).toString() : (date.getMonth() + 1);
+    //             //         day.value = date.getDate() < 10 ? '0' + date.getDate().toString() : date.getDate();
 
-                        quiz.next();
-                    },
-                    alwaysShow: true,
-                    onSelect: function (input, instance, date) {
-                        let parent = inputWrap.closest('.item-quiz__answers');
-                        let datapicer = parent.querySelector('.qs-datepicker-container');
-                        datapicer.classList.remove('show');
-                    }
-                });
+    //             //         quiz.next();
+    //             //     },
+    //             //     alwaysShow: true,
+    //             //     onSelect: function (input, instance, date) {
+    //             //         let parent = inputWrap.closest('.item-quiz__answers');
+    //             //         let datapicer = parent.querySelector('.qs-datepicker-container');
+    //             //         datapicer.classList.remove('show');
+    //             //     }
+    //             // });
 
-                inputWrap.addEventListener('click', () => {
-                    let parent = inputWrap.closest('.item-quiz__answers');
-                    let datapicer = parent.querySelector('.qs-datepicker-container');
-                    datapicer.classList.add('show');
+    //             // inputWrap.addEventListener('click', () => {
+    //             //     let parent = inputWrap.closest('.item-quiz__answers');
+    //             //     let datapicer = parent.querySelector('.qs-datepicker-container');
+    //             //     datapicer.classList.add('show');
+    //             // })
+
+    //         })
+    //     }
+    // })()
+
+    let selecDateButtons = quizBlock.querySelectorAll('.select-date');
+    if(selecDateButtons.length) {
+        selecDateButtons.forEach(button => {
+            let form = button.closest('form');
+            let parentItem = button.closest('.item-quiz');
+            let selects = parentItem.querySelectorAll('select');
+
+            selects.forEach(select => {
+                let parent = select.closest('.select');
+                parent.addEventListener('click', () => {
+                    removeError(select);
                 })
-
             })
-        }
-    })()
+
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                let result = Array.from(selects).map(select => {
+                    if(!select.value.trim()) {
+                        setArror(select);
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }).every(i => i === true);
+
+                if(result) {
+                    quiz.next();
+                }
+            })
+        })
+    }
 
     let startInputs = quizBlock.querySelectorAll('input[name="start-q"]');
     if(startInputs.length) {
